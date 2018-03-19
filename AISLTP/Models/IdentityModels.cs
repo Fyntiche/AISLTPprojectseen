@@ -12,14 +12,11 @@ namespace AISLTP.Models
         public class ApplicationDbContext : DbContext
         {
             public ApplicationDbContext() : base( "DefaultConnection" )
-            {
-            }
-            public static ApplicationDbContext Create()
-            {
-                return new ApplicationDbContext();
-            }
+            { }
             public DbSet<Sotr> Sotrs { get; set; }
-            public DbSet<Lico> Licos { get; set; }
+            public DbSet<Lico> Licoes { get; set; }
+            public DbSet<Pol> Pols { get; set; }
+
         }
     }
 }

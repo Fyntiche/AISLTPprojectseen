@@ -9,7 +9,7 @@ namespace AISLTP.Entities
     public class Sotr
     {
         [Key]
-        public string ID { get; set; }
+        public string Id { get; set; }
 
         [Required]
         public string Cod_sotr { get; set; }
