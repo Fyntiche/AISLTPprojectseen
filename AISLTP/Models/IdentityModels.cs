@@ -19,7 +19,6 @@ namespace AISLTP.Models
                 return new ApplicationDbContext();
             }
             public DbSet<Sotr> Sotrs { get; set; }
-            public DbSet<Court> Courts { get; set; }
             public DbSet<Lico> Licos { get; set; }
         }
     }

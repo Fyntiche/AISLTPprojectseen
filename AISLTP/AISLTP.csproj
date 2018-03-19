@@ -151,12 +151,16 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
-    <Compile Include="Entities\Court.cs" />
     <Compile Include="Entities\Lico.cs" />
     <Compile Include="Entities\Sotr.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803190840267_InitialCreate.cs" />
+    <Compile Include="Migrations\201803190840267_InitialCreate.Designer.cs">
+      <DependentUpon>201803190840267_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -325,6 +329,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803190840267_InitialCreate.resx">
+      <DependentUpon>201803190840267_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
