@@ -315,10 +315,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Sotr\Index.cshtml" />
     <Content Include="Views\Sp\Index.cshtml" />
-    <Content Include="Views\Licos\Create.cshtml" />
-    <Content Include="Views\Licos\Delete.cshtml" />
-    <Content Include="Views\Licos\Details.cshtml" />
-    <Content Include="Views\Licos\Edit.cshtml" />
     <Content Include="Views\Licos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
