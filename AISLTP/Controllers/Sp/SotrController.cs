@@ -1,11 +1,9 @@
-﻿using AISLTP.Entities;
+﻿using AISLTP.Context;
+using AISLTP.Entities;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using static AISLTP.Models.IdentityModels;
 
 namespace AISLTP.Controllers.Sp
 {
@@ -20,6 +18,7 @@ namespace AISLTP.Controllers.Sp
         public JsonResult GetSotr(string sidx , string sort , int page , int rows , bool _search , string searchField , string searchOper , string searchString)
         {
             ApplicationDbContext db = new ApplicationDbContext();
+            string cod = ViewBag.CodLica;
             sort = sort ?? "";
             int pageIndex = Convert.ToInt32( page ) - 1;
             int pageSize = rows;

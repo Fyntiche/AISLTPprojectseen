@@ -149,10 +149,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Journals registrations\LicosController.cs" />
+    <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
+    <Compile Include="Entities\Np.cs" />
+    <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
+    <Compile Include="Entities\Nac.cs" />
+    <Compile Include="Entities\Obl.cs" />
     <Compile Include="Entities\Pol.cs" />
     <Compile Include="Entities\Sotr.cs" />
     <Compile Include="Global.asax.cs">
@@ -163,7 +167,7 @@
       <DependentUpon>201803190840267_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Context\IdentityContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -315,7 +319,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Sotr\Index.cshtml" />
     <Content Include="Views\Sp\Index.cshtml" />
-    <Content Include="Views\Licos\Index.cshtml" />
+    <Content Include="Views\Licoes\Create.cshtml" />
+    <Content Include="Views\Licoes\Delete.cshtml" />
+    <Content Include="Views\Licoes\Details.cshtml" />
+    <Content Include="Views\Licoes\Edit.cshtml" />
+    <Content Include="Views\Licoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

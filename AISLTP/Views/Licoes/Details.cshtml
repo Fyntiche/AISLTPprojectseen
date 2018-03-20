@@ -1,0 +1,139 @@
+﻿@model AISLTP.Entities.Lico
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nac.Txt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nac.Txt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Np.Txt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Np.Txt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Obl.Txt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obl.Txt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pol.Txt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pol.Txt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rn.Txt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rn.Txt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Otc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Otc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pasport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pasport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ul)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ul)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Korpus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Korpus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kvartira)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kvartira)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vneshnost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vneshnost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

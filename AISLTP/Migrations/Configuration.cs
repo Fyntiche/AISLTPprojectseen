@@ -1,11 +1,8 @@
 namespace AISLTP.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AISLTP.Models.IdentityModels.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Context.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -13,7 +10,7 @@ namespace AISLTP.Migrations
             ContextKey = "AISLTP.Models.IdentityModels+ApplicationDbContext";
         }
 
-        protected override void Seed(AISLTP.Models.IdentityModels.ApplicationDbContext context)
+        protected override void Seed(Context.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

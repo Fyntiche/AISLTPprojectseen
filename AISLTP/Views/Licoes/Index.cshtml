@@ -1,0 +1,118 @@
+﻿@model IEnumerable<AISLTP.Entities.Lico>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nac.Txt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Np.Txt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Obl.Txt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pol.Txt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rn.Txt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ima)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Otc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pasport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ul)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Korpus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kvartira)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vneshnost)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nac.Txt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Np.Txt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obl.Txt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pol.Txt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rn.Txt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Otc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pasport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ul)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Korpus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kvartira)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vneshnost)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

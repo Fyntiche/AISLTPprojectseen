@@ -6,15 +6,15 @@ using System.Web;
 
 namespace AISLTP.Entities
 {
-    public class Pol
+    public class Obl
     {
         [Key]
         public int ID { get; set; }
-        [Display( Name = "Пол" )]
+        [Display( Name = "Область" )]
         public string Txt { get; set; }
 
         public ICollection<Lico> Licos { get; set; }
-        public Pol()
+        public Obl()
         {
             Licos = new List<Lico>();
         }
