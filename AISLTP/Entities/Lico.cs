@@ -29,8 +29,8 @@ namespace AISLTP.Entities
         [Display( Name = "Отчество" )]
         public string Otc { get; set; }
 
-        [Required( ErrorMessage = "Поле должно быть установлено" )]
         [Display( Name = "Дата рождения" )]
+        [DataType( DataType.Date )]
         public DateTime Dr { get; set; }
 
         [Display( Name = "Пол" )]
@@ -67,7 +67,7 @@ namespace AISLTP.Entities
         public string Korpus { get; set; }
 
         [Display( Name = "Квартира" )]
-        public int Kvartira { get; set; }
+        public string Kvartira { get; set; }
 
         [StringLength( 255 , ErrorMessage = "Длина строки должна до 255 символов" )]
         [Display( Name = "Внешность" )]
