@@ -153,6 +153,7 @@
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
+    <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Np.cs" />
     <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
@@ -322,7 +323,6 @@
     <Content Include="Views\Sp\Index.cshtml" />
     <Content Include="Views\Licoes\Create.cshtml" />
     <Content Include="Views\Licoes\Delete.cshtml" />
-    <Content Include="Views\Licoes\Details.cshtml" />
     <Content Include="Views\Licoes\Edit.cshtml" />
     <Content Include="Views\Licoes\Index.cshtml" />
     <Content Include="Views\Input\Index.cshtml" />

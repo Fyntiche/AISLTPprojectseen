@@ -23,21 +23,6 @@ namespace AISLTP.Controllers.Journals_registrations
             return View(await licos.ToListAsync());
         }
 
-        // GET: Licoes/Details/5
-        public async Task<ActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Lico lico = await db.Licos.FindAsync(id);
-            if (lico == null)
-            {
-                return HttpNotFound();
-            }
-            return View(lico);
-        }
-
         // GET: Licoes/Create
         public ActionResult Create()
         {

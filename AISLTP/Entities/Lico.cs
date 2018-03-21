@@ -57,18 +57,6 @@ namespace AISLTP.Entities
         public int? NpID { get; set; }
         public Np Np { get; set; }
 
-        [Display( Name = "Улица" )]
-        public string Ul { get; set; }
-
-        [Display( Name = "Дом" )]
-        public string Dom { get; set; }
-
-        [Display( Name = "Корпус" )]
-        public string Korpus { get; set; }
-
-        [Display( Name = "Квартира" )]
-        public string Kvartira { get; set; }
-
         [StringLength( 255 , ErrorMessage = "Длина строки должна до 255 символов" )]
         [Display( Name = "Внешность" )]
         public string Vneshnost { get; set; }
