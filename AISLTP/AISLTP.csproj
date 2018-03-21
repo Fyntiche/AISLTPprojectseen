@@ -154,6 +154,7 @@
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
     <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Lico_Address.cs" />
     <Compile Include="Entities\Np.cs" />
     <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
