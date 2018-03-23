@@ -13,7 +13,8 @@ namespace AISLTP.Entities
         [Display( Name = "Национальность" )]
         public string Txt { get; set; }
 
-        public ICollection<Lico> Licos { get; set; }
+        public virtual ICollection<Lico> Licos { get; set; }
+
         public Nac()
         {
             Licos = new List<Lico>();

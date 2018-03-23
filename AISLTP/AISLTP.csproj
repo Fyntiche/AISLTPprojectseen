@@ -150,7 +150,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Input\InputController.cs" />
-    <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
     <Compile Include="Entities\Address.cs" />
@@ -322,14 +321,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Sotr\Index.cshtml" />
     <Content Include="Views\Sp\Index.cshtml" />
-    <Content Include="Views\Licoes\Create.cshtml" />
-    <Content Include="Views\Licoes\Delete.cshtml" />
-    <Content Include="Views\Licoes\Edit.cshtml" />
-    <Content Include="Views\Licoes\Index.cshtml" />
     <Content Include="Views\Input\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\Journals registrations\" />
     <Folder Include="Controllers\Search\" />
   </ItemGroup>
   <ItemGroup>

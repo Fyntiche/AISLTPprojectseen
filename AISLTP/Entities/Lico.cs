@@ -42,8 +42,11 @@ namespace AISLTP.Entities
         public string Pasport { get; set; }
 
         [Display( Name = "Национальность" )]
-        public int?  NacID { get; set; }
-        public Nac Nac { get; set; }
+        public virtual ICollection<Nac> Nacs { get; set; }
+        public Lico()
+        {
+            Nacs = new List<Nac>();
+        }
 
         [Display( Name = "Область" )]
         public int? OblID { get; set; }
