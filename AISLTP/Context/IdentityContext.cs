@@ -19,13 +19,15 @@ namespace AISLTP.Context
             public DbSet<Rn> Rns { get; set; }
             public DbSet<Np> Nps { get; set; }
 
+            public DbSet<Address> Addresses { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Nac>().HasMany( c => c.Licos )
-                .WithMany( s => s.Nacs )
-                .Map( t => t.MapLeftKey( "NacID" )
+            modelBuilder.Entity<Address>().HasMany( c => c.Licos )
+                .WithMany( s => s.Addresses )
+                .Map( t => t.MapLeftKey( "AddressID" )
                  .MapRightKey( "LicoID" )
-                 .ToTable( "Nac_Lico" ) );
+                 .ToTable( "Address_Lico" ) );
         }
     }
 }

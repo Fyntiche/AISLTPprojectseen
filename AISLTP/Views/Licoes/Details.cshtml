@@ -1,0 +1,121 @@
+﻿@using AISLTP.Entities
+@model Lico
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor( model => model.Nac.Txt )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Nac.Txt )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Np.Txt )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Np.Txt )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Obl.Txt )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Obl.Txt )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Pol.Txt )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Pol.Txt )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Rn.Txt )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Rn.Txt )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Fam )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Fam )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Ima )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Ima )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Otc )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Otc )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Dr )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Dr )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Pasport )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Pasport )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor( model => model.Vneshnost )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor( model => model.Vneshnost )
+        </dd>
+
+    </dl>
+</div>
+<div class="display-label"><b>Адресса:</b></div>
+<ul>
+    @foreach (Address c in Model.Addresses)
+    {
+        <li>@c.Obl</li>
+        <li>@c.Rn</li>
+        <li>@c.Np</li>
+        <li>@c.Ul</li>
+        <li>@c.Dom</li>
+        <li>@c.Korpus</li>
+        <li>@c.Kvartira</li>        
+    }
+</ul>
+<p>
+    @Html.ActionLink( "Edit" , "Edit" , new { id = Model.ID } ) |
+    @Html.ActionLink( "Back to List" , "Index" )
+</p>

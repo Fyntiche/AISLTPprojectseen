@@ -14,9 +14,11 @@ namespace AISLTP.Entities
         public string Txt { get; set; }
 
         public ICollection<Lico> Licos { get; set; }
+        public ICollection<Address> Addresss { get; set; }
         public Obl()
         {
             Licos = new List<Lico>();
+            Addresss = new List<Address>();
         }
     }
 }

@@ -36,6 +36,12 @@ namespace AISLTP.Entities
 
         [Display( Name = "Квартира" )]
         public string Kvartira { get; set; }
-                
+
+
+        public virtual ICollection<Lico> Licos { get; set; }
+        public Address()
+        {
+            Licos = new List<Lico>();
+        }
     }
 }

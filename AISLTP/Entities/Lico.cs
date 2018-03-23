@@ -42,11 +42,9 @@ namespace AISLTP.Entities
         public string Pasport { get; set; }
 
         [Display( Name = "Национальность" )]
-        public virtual ICollection<Nac> Nacs { get; set; }
-        public Lico()
-        {
-            Nacs = new List<Nac>();
-        }
+        public int? NacID { get; set; }
+        public Nac Nac { get; set; }
+
 
         [Display( Name = "Область" )]
         public int? OblID { get; set; }
@@ -63,5 +61,11 @@ namespace AISLTP.Entities
         [StringLength( 255 , ErrorMessage = "Длина строки должна до 255 символов" )]
         [Display( Name = "Внешность" )]
         public string Vneshnost { get; set; }
+
+        public virtual ICollection<Address> Addresses { get; set; }
+        public Lico()
+        {
+            Addresses = new List<Address>();
+        }
     }
 }

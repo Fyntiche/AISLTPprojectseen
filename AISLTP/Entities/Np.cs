@@ -16,9 +16,15 @@ namespace AISLTP.Entities
         public string TypeTxt { get; set; }
 
         public ICollection<Lico> Licos { get; set; }
+        public ICollection<Address> Addresss { get; set; }
+
         public Np()
         {
             Licos = new List<Lico>();
+            Addresss = new List<Address>();
         }
+
+
+
     }
 }
