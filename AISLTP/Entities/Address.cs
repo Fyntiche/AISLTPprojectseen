@@ -15,15 +15,15 @@ namespace AISLTP.Entities
 
         [Display( Name = "Область" )]
         public int? OblID { get; set; }
-        public Obl Obl { get; set; }
+        public virtual Obl Obl { get; set; }
 
         [Display( Name = "Район" )]
         public int? RnID { get; set; }
-        public Rn Rn { get; set; }
+        public virtual Rn Rn { get; set; }
 
         [Display( Name = "Населенный пункт" )]
         public int? NpID { get; set; }
-        public Np Np { get; set; }
+        public virtual Np Np { get; set; }
 
         [Display( Name = "Улица" )]
         public string Ul { get; set; }

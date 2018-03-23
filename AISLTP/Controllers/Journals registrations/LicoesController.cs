@@ -19,7 +19,9 @@ namespace AISLTP.Controllers.Journals_registrations
         // GET: Licoes
         public async Task<ActionResult> Index()
         {
-            var licos = db.Licos.Include(l => l.Nac).Include(l => l.Np).Include(l => l.Obl).Include(l => l.Pol).Include(l => l.Rn);
+            var licos = db.Licos.Include( l => l.Nac ).Include( l => l.Np ).
+                Include( l => l.Obl ).Include( l => l.Pol ).Include( l => l.Rn ).Include( l => l.Addresses );
+            //var addresses = db.Addresses.Include( a => a.Np ).Include( a => a.Obl ).Include( a => a.Rn );
             return View(await licos.ToListAsync());
         }
 
