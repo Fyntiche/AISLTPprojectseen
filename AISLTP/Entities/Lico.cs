@@ -35,7 +35,7 @@ namespace AISLTP.Entities
 
         [Display( Name = "Пол" )]
         public int? PolID { get; set; }
-        public Pol Pol { get; set; }
+        public virtual Pol Pol { get; set; }
 
         [StringLength( 255 , ErrorMessage = "Длина строки должна 14 символов" )]
         [Display( Name = "Идетификационный номер паспорта" )]
@@ -43,20 +43,20 @@ namespace AISLTP.Entities
 
         [Display( Name = "Национальность" )]
         public int? NacID { get; set; }
-        public Nac Nac { get; set; }
+        public virtual Nac Nac { get; set; }
 
 
         [Display( Name = "Область" )]
         public int? OblID { get; set; }
-        public Obl Obl { get; set; }
+        public virtual Obl Obl { get; set; }
 
         [Display( Name = "Район" )]
         public int? RnID { get; set; }
-        public Rn Rn { get; set; }
+        public virtual Rn Rn { get; set; }
         
         [Display( Name = "Населенный пункт" )]
         public int? NpID { get; set; }
-        public Np Np { get; set; }
+        public virtual Np Np { get; set; }
 
         [StringLength( 255 , ErrorMessage = "Длина строки должна до 255 символов" )]
         [Display( Name = "Внешность" )]

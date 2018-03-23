@@ -52,8 +52,6 @@ namespace AISLTP.Controllers.Journals_registrations
         }
 
         // POST: Licoes/Create
-        // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
-        // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "ID,Fam,Ima,Otc,Dr,PolID,Pasport,NacID,OblID,RnID,NpID,Vneshnost")] Lico lico)
