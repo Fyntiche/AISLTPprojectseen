@@ -328,9 +328,6 @@
     <Content Include="Views\Licoes\Details.cshtml" />
     <Content Include="Views\Licoes\Edit.cshtml" />
     <Content Include="Views\Licoes\Index.cshtml" />
-    <Content Include="Views\Addresses\Create.cshtml" />
-    <Content Include="Views\Addresses\Delete.cshtml" />
-    <Content Include="Views\Addresses\Details.cshtml" />
     <Content Include="Views\Addresses\Edit.cshtml" />
     <Content Include="Views\Addresses\Index.cshtml" />
   </ItemGroup>
