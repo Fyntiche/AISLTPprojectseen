@@ -26,7 +26,7 @@ namespace AISLTP.Controllers.Sp
             var SotrList = db.Sotrs.Select(
                     t => new
                     {
-                        t.Id ,
+                        t.ID ,
                         t.Cod_sotr ,
                         t.Ima ,
                         t.Fio ,
@@ -86,7 +86,6 @@ namespace AISLTP.Controllers.Sp
             {
                 if (ModelState.IsValid)
                 {
-                    Model.Id = Guid.NewGuid().ToString();
                     db.Sotrs.Add( Model );
 
                     db.SaveChanges();
@@ -126,7 +125,7 @@ namespace AISLTP.Controllers.Sp
             }
             return msg;
         }
-        public string Delete(string Id)
+        public string Delete(int Id)
         {
             ApplicationDbContext db = new ApplicationDbContext();
             Sotr Sotr = db.Sotrs.Find( Id );
