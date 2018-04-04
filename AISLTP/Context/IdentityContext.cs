@@ -23,6 +23,7 @@ namespace AISLTP.Context
             public DbSet<Medcom> Medcoms { get; set; }
             public DbSet<Osnnap> Osnnaps { get; set; }
             public DbSet<Doc> Docs { get; set; }
+            public DbSet<Educ> Educs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
