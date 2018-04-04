@@ -19,6 +19,7 @@ namespace AISLTP.Context
             public DbSet<Rn> Rns { get; set; }
             public DbSet<Np> Nps { get; set; }
             public DbSet<Address> Addresses { get; set; }
+            public DbSet<LTP> LTPs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

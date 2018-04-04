@@ -152,9 +152,11 @@
     <Compile Include="Controllers\Input\InputController.cs" />
     <Compile Include="Controllers\Journals registrations\AddressController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
+    <Compile Include="Controllers\Sp\LTPController.cs" />
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
     <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\LTP.cs" />
     <Compile Include="Entities\Np.cs" />
     <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
@@ -307,6 +309,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Sp\LTPScript.js" />
     <Content Include="Scripts\Sp\SotrScript.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -331,6 +334,7 @@
     <Content Include="Views\Address\Show.cshtml" />
     <Content Include="Views\Address\Index.cshtml" />
     <Content Include="Views\Address\CreateAddress.cshtml" />
+    <Content Include="Views\LTP\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -368,7 +372,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>8575</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
