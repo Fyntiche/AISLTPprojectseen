@@ -159,9 +159,11 @@
     <Compile Include="Controllers\Sp\NpController.cs" />
     <Compile Include="Controllers\Sp\OblController.cs" />
     <Compile Include="Controllers\Sp\OsnnapController.cs" />
+    <Compile Include="Controllers\Sp\ProfController.cs" />
     <Compile Include="Controllers\Sp\RnController.cs" />
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
+    <Compile Include="Controllers\Sp\SpecController.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Doc.cs" />
     <Compile Include="Entities\Educ.cs" />
@@ -169,12 +171,14 @@
     <Compile Include="Entities\Medcom.cs" />
     <Compile Include="Entities\Np.cs" />
     <Compile Include="Entities\Osnnap.cs" />
+    <Compile Include="Entities\Prof.cs" />
     <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
     <Compile Include="Entities\Nac.cs" />
     <Compile Include="Entities\Obl.cs" />
     <Compile Include="Entities\Pol.cs" />
     <Compile Include="Entities\Sotr.cs" />
+    <Compile Include="Entities\Spec.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -327,8 +331,10 @@
     <Content Include="Scripts\Sp\NpScript.js" />
     <Content Include="Scripts\Sp\OblScript.js" />
     <Content Include="Scripts\Sp\OsnnapScript.js" />
+    <Content Include="Scripts\Sp\ProfScript.js" />
     <Content Include="Scripts\Sp\RnScript.js" />
     <Content Include="Scripts\Sp\SotrScript.js" />
+    <Content Include="Scripts\Sp\SpecScript.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -360,6 +366,8 @@
     <Content Include="Views\Osnnap\Index.cshtml" />
     <Content Include="Views\Doc\Index.cshtml" />
     <Content Include="Views\Educ\Index.cshtml" />
+    <Content Include="Views\Prof\Index.cshtml" />
+    <Content Include="Views\Spec\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -24,6 +24,8 @@ namespace AISLTP.Context
             public DbSet<Osnnap> Osnnaps { get; set; }
             public DbSet<Doc> Docs { get; set; }
             public DbSet<Educ> Educs { get; set; }
+            public DbSet<Prof> Profs { get; set; }
+            public DbSet<Spec> Specs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
