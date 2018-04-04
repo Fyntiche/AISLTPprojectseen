@@ -1,10 +1,8 @@
 ﻿using AISLTP.Context;
 using AISLTP.Entities;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Sp

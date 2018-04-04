@@ -9,7 +9,7 @@
 
 <table class="table">
     <tr>
-        
+
         <th>
             @Html.DisplayNameFor(model => model.Fam)
         </th>
@@ -22,13 +22,13 @@
         <th>
             @Html.DisplayNameFor(model => model.Dr)
         </th>
-        
+
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-       
+
         <td>
             @Html.DisplayFor(modelItem => item.Fam)
         </td>
@@ -41,11 +41,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.Dr)
         </td>
-       
+
         <td>
             @Html.ActionLink("Выбрать", "Show" , new { id=item.ID })
         </td>
     </tr>
 }
-
 </table>

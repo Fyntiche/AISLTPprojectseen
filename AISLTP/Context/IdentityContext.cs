@@ -27,6 +27,12 @@ namespace AISLTP.Context
         public DbSet<Vidsv> Vidsvs { get; set; }
         public DbSet<Viddebt> Viddebts { get; set; }
         public DbSet<Otnosh> Otnoshs { get; set; }
+        public DbSet<Osnsocr> Osnsocrs { get; set; }
+        public DbSet<Osnprod> Osnprods { get; set; }
+        public DbSet<Osndosr> Osndosrs { get; set; }
+        public DbSet<Samovol> Samovols { get; set; }
+        public DbSet<UK> UKs { get; set; }
+        public DbSet<Koap> Koaps { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
