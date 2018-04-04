@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace AISLTP.Entities
 {
@@ -10,10 +7,12 @@ namespace AISLTP.Entities
     {
         [Key]
         public int ID { get; set; }
-        [Display( Name = "Пол" )]
+
+        [Display(Name = "Пол")]
         public string Txt { get; set; }
 
         public ICollection<Lico> Licos { get; set; }
+
         public Pol()
         {
             Licos = new List<Lico>();

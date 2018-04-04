@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using AISLTP.Context;
+using AISLTP.Entities;
 using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
-using System.Web;
+using System.Threading.Tasks;
 using System.Web.Mvc;
-using AISLTP.Context;
-using AISLTP.Entities;
 
 namespace AISLTP.Controllers.Journals_registrations
 {
@@ -19,8 +15,8 @@ namespace AISLTP.Controllers.Journals_registrations
         // GET: Licoes
         public async Task<ActionResult> Index()
         {
-            var licos = db.Licos.Include( l => l.Nac ).Include( l => l.Np ).
-                Include( l => l.Obl ).Include( l => l.Pol ).Include( l => l.Rn ).Include( l => l.Addresses );
+            var licos = db.Licos.Include(l => l.Nac).Include(l => l.Np).
+                Include(l => l.Obl).Include(l => l.Pol).Include(l => l.Rn).Include(l => l.Addresses);
             //var addresses = db.Addresses.Include( a => a.Np ).Include( a => a.Obl ).Include( a => a.Rn );
             return View(await licos.ToListAsync());
         }
@@ -93,7 +89,7 @@ namespace AISLTP.Controllers.Journals_registrations
         }
 
         // POST: Licoes/Edit/5
-        // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
+        // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]

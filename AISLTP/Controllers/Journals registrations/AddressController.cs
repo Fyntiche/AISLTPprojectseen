@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AISLTP.Context;
+﻿using AISLTP.Context;
 using AISLTP.Entities;
+using System.Data.Entity;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Journals_registrations
 {
@@ -22,8 +17,6 @@ namespace AISLTP.Controllers.Journals_registrations
             var licos = db.Licos.Include(l => l.Nac).Include(l => l.Np).Include(l => l.Obl).Include(l => l.Pol).Include(l => l.Rn);
             return View(await licos.ToListAsync());
         }
-
-       
 
         // GET: Address/Show/5
         public async Task<ActionResult> Show(int? id)
@@ -65,28 +58,27 @@ namespace AISLTP.Controllers.Journals_registrations
 
         public ActionResult CreateAddress()
         {
-            ViewBag.NpID = new SelectList( db.Nps , "ID" , "Txt" );
-            ViewBag.OblID = new SelectList( db.Obls , "ID" , "Txt" );
-            ViewBag.RnID = new SelectList( db.Rns , "ID" , "Txt" );
+            ViewBag.NpID = new SelectList(db.Nps, "ID", "Txt");
+            ViewBag.OblID = new SelectList(db.Obls, "ID", "Txt");
+            ViewBag.RnID = new SelectList(db.Rns, "ID", "Txt");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateAddress([Bind( Include = "ID,OblID,RnID,NpID,Ul,Dom,Korpus,Kvartira" )] Address CreateAddress)
+        public async Task<ActionResult> CreateAddress([Bind(Include = "ID,OblID,RnID,NpID,Ul,Dom,Korpus,Kvartira")] Address CreateAddress)
         {
             if (ModelState.IsValid)
             {
-                
-                db.Addresses.Add( CreateAddress );
+                db.Addresses.Add(CreateAddress);
                 await db.SaveChangesAsync();
-                return RedirectToAction( "Index" );
+                return RedirectToAction("Index");
             }
 
-            ViewBag.NpID = new SelectList( db.Nps , "ID" , "Txt" , CreateAddress.NpID );
-            ViewBag.OblID = new SelectList( db.Obls , "ID" , "Txt" , CreateAddress.OblID );
-            ViewBag.RnID = new SelectList( db.Rns , "ID" , "Txt" , CreateAddress.RnID );
-            return View( CreateAddress );
+            ViewBag.NpID = new SelectList(db.Nps, "ID", "Txt", CreateAddress.NpID);
+            ViewBag.OblID = new SelectList(db.Obls, "ID", "Txt", CreateAddress.OblID);
+            ViewBag.RnID = new SelectList(db.Rns, "ID", "Txt", CreateAddress.RnID);
+            return View(CreateAddress);
         }
 
         protected override void Dispose(bool disposing)

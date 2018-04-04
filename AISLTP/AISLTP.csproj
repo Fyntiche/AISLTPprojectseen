@@ -152,6 +152,7 @@
     <Compile Include="Controllers\Input\InputController.cs" />
     <Compile Include="Controllers\Journals registrations\AddressController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
+    <Compile Include="Controllers\Sp\CourtController.cs" />
     <Compile Include="Controllers\Sp\DocController.cs" />
     <Compile Include="Controllers\Sp\EducController.cs" />
     <Compile Include="Controllers\Sp\LTPController.cs" />
@@ -165,6 +166,7 @@
     <Compile Include="Controllers\Sp\SpController.cs" />
     <Compile Include="Controllers\Sp\SpecController.cs" />
     <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Court.cs" />
     <Compile Include="Entities\Doc.cs" />
     <Compile Include="Entities\Educ.cs" />
     <Compile Include="Entities\LTP.cs" />
@@ -324,6 +326,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Sp\CourtScript.js" />
     <Content Include="Scripts\Sp\DocScript.js" />
     <Content Include="Scripts\Sp\EducScript.js" />
     <Content Include="Scripts\Sp\LTPScript.js" />
@@ -368,6 +371,7 @@
     <Content Include="Views\Educ\Index.cshtml" />
     <Content Include="Views\Prof\Index.cshtml" />
     <Content Include="Views\Spec\Index.cshtml" />
+    <Content Include="Views\Court\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

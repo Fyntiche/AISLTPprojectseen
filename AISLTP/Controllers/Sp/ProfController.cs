@@ -1,10 +1,8 @@
 ﻿using AISLTP.Context;
 using AISLTP.Entities;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Sp
@@ -86,6 +84,7 @@ namespace AISLTP.Controllers.Sp
             }
             return msg;
         }
+
         public string Edit(Prof Model)
         {
             ApplicationDbContext db = new ApplicationDbContext();
@@ -109,6 +108,7 @@ namespace AISLTP.Controllers.Sp
             }
             return msg;
         }
+
         public string Delete(int Id)
         {
             ApplicationDbContext db = new ApplicationDbContext();

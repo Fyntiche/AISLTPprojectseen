@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace AISLTP.Entities
 {
-    public class LTP
+    public class Cout
     {
         [Key]
         [HiddenInput]
@@ -28,7 +28,7 @@ namespace AISLTP.Entities
         [Display(Name = "Почтовый индекс")]
         public int Pindex { get; set; }
 
-        [Display(Name = "Телефон дежурной службы")]
+        [Display(Name = "Телефон")]
         public string Teldej { get; set; }
 
         [Display(Name = "Электронная почта")]

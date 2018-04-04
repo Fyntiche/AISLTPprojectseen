@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace AISLTP.Entities
 {
@@ -12,7 +9,7 @@ namespace AISLTP.Entities
         public int ID { get; set; }
 
         [Required(ErrorMessage = "Поле должно быть установлено")]
-        [Display( Name = "Национальность" )]
+        [Display(Name = "Национальность")]
         public string Txt { get; set; }
 
         public virtual ICollection<Lico> Licos { get; set; }

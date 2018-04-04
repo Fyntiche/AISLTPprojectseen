@@ -1,17 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Entities
 {
-    public class LTP
+    public class Court
     {
         [Key]
         [HiddenInput]
         public int ID { get; set; }
 
         [Required(ErrorMessage = "Поле должно быть установлено")]
-        [Display(Name = "Номер ЛТП")]
-        public string Nom { get; set; }
+        [Display(Name = "Название")]
+        public string Name { get; set; }
 
         [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display(Name = "Населенный пункт")]
@@ -28,7 +32,7 @@ namespace AISLTP.Entities
         [Display(Name = "Почтовый индекс")]
         public int Pindex { get; set; }
 
-        [Display(Name = "Телефон дежурной службы")]
+        [Display(Name = "Телефон")]
         public string Teldej { get; set; }
 
         [Display(Name = "Электронная почта")]
