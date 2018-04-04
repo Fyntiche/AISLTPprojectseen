@@ -6,20 +6,13 @@ using System.Web;
 
 namespace AISLTP.Entities
 {
-    public class Nac
+    public class Medcom
     {
         [Key]
         public int ID { get; set; }
 
         [Required(ErrorMessage = "Поле должно быть установлено")]
-        [Display( Name = "Национальность" )]
+        [Display(Name = "Медицинская коммисия")]
         public string Txt { get; set; }
-
-        public virtual ICollection<Lico> Licos { get; set; }
-
-        public Nac()
-        {
-            Licos = new List<Lico>();
-        }
     }
 }

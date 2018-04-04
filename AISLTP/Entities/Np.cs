@@ -10,10 +10,10 @@ namespace AISLTP.Entities
     {
         [Key]
         public int ID { get; set; }
+
+        [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display( Name = "Населенный пункт" )]
         public string Txt { get; set; }
-
-        public string TypeTxt { get; set; }
 
         public ICollection<Lico> Licos { get; set; }
         public ICollection<Address> Addresss { get; set; }

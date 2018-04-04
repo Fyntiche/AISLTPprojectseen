@@ -10,6 +10,8 @@ namespace AISLTP.Entities
     {
         [Key]
         public int ID { get; set; }
+
+        [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display( Name = "Район" )]
         public string Txt { get; set; }
 

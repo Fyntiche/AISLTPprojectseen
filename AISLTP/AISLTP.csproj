@@ -152,12 +152,21 @@
     <Compile Include="Controllers\Input\InputController.cs" />
     <Compile Include="Controllers\Journals registrations\AddressController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
+    <Compile Include="Controllers\Sp\DocController.cs" />
     <Compile Include="Controllers\Sp\LTPController.cs" />
+    <Compile Include="Controllers\Sp\MedcomController.cs" />
+    <Compile Include="Controllers\Sp\NpController.cs" />
+    <Compile Include="Controllers\Sp\OblController.cs" />
+    <Compile Include="Controllers\Sp\OsnnapController.cs" />
+    <Compile Include="Controllers\Sp\RnController.cs" />
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
     <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Doc.cs" />
     <Compile Include="Entities\LTP.cs" />
+    <Compile Include="Entities\Medcom.cs" />
     <Compile Include="Entities\Np.cs" />
+    <Compile Include="Entities\Osnnap.cs" />
     <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
     <Compile Include="Entities\Nac.cs" />
@@ -309,7 +318,13 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Sp\DocScript.js" />
     <Content Include="Scripts\Sp\LTPScript.js" />
+    <Content Include="Scripts\Sp\MedcomScript.js" />
+    <Content Include="Scripts\Sp\NpScript.js" />
+    <Content Include="Scripts\Sp\OblScript.js" />
+    <Content Include="Scripts\Sp\OsnnapScript.js" />
+    <Content Include="Scripts\Sp\RnScript.js" />
     <Content Include="Scripts\Sp\SotrScript.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -335,6 +350,12 @@
     <Content Include="Views\Address\Index.cshtml" />
     <Content Include="Views\Address\CreateAddress.cshtml" />
     <Content Include="Views\LTP\Index.cshtml" />
+    <Content Include="Views\Obl\Index.cshtml" />
+    <Content Include="Views\Rn\Index.cshtml" />
+    <Content Include="Views\Np\Index.cshtml" />
+    <Content Include="Views\Medcom\Index.cshtml" />
+    <Content Include="Views\Osnnap\Index.cshtml" />
+    <Content Include="Views\Doc\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

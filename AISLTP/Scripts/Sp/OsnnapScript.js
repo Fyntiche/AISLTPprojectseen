@@ -1,25 +1,20 @@
 ﻿$(function () {
     $("#jqGrid").jqGrid({
-        url: "/LTP/GetLTP",
+        url: "/Osnnap/GetOsnnap",
         datatype: 'json',
         mtype: 'Get',
-        colNames: ['ID', 'Номер ЛТП', 'Населенный пункт', 'Улица', 'Дом', 'Почтовый индекс', 'Телефон дежурной службы', 'Электронная почта'],
+        colNames: ['ID', 'Название'],
         colModel: [
             { key: true, hidden: true, name: 'ID', index: 'ID', editable: true },
-            { key: false, name: 'Nom', index: 'Nom', editable: true },
-            { key: false, name: 'Np', index: 'Np', editable: true, search: false },
-            { key: false, name: 'Ul', index: 'Ul', editable: true, search: false },
-            { key: false, name: 'Dom', index: 'Dom', editable: true, search: false },
-            { key: false, name: 'Pindex', index: 'Pindex', editable: true, search: false },
-            { key: false, name: 'Teldej', index: 'Teldej', editable: true, search: false },
-            { key: false, name: 'Email', index: 'Email', editable: true, search: false }],
+            { key: false, name: 'Txt', index: 'Txt', editable: true }],
+
         pager: jQuery('#jqControls'),
         rowNum: 10,
         rowList: [10, 20, 30, 40, 50],
         height: '100%',
         viewrecords: true,
-        caption: 'Список лечебно-трудовых комплексов',
-        emptyrecords: 'Нет записей ЛТП для отображения',
+        caption: 'Список оснований для направления в ЛТП',
+        emptyrecords: 'Нет записей для отображения',
         jsonReader: {
             root: "rows",
             page: "page",
@@ -32,11 +27,11 @@
         multiselect: false
     }).navGrid('#jqControls', {
         edit: true, add: true, del: true, search: true,
-        searchtext: "Поиск ЛТП", refresh: true
+        searchtext: "Поиск", refresh: true
     },
         {
             zIndex: 100,
-            url: '/LTP/Edit',
+            url: '/Osnnap/Edit',
             closeOnEscape: true,
             closeAfterEdit: true,
             recreateForm: true,
@@ -48,7 +43,7 @@
         },
         {
             zIndex: 100,
-            url: "/LTP/Create",
+            url: "/Osnnap/Create",
             closeOnEscape: true,
             closeAfterAdd: true,
             afterComplete: function (response) {
@@ -59,7 +54,7 @@
         },
         {
             zIndex: 100,
-            url: "/LTP/Delete",
+            url: "/Osnnap/Delete",
             closeOnEscape: true,
             closeAfterDelete: true,
             recreateForm: true,
@@ -72,7 +67,7 @@
         },
         {
             zIndex: 100,
-            caption: "Поиск ЛТП",
+            caption: "Поиск",
             sopt: ['cn']
         });
 });

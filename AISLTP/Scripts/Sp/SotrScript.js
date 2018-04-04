@@ -6,7 +6,7 @@
         colNames: ['ID', 'Код сотрудника', 'Фамилия', 'Имя', 'Отчество', 'Дата рождения', 'Пол', 'Дата создания'],
         colModel: [
             { key: true, hidden: true, name: 'ID', index: 'ID', editable: true },
-            { key: false, name: 'Cod_sotr', index: 'Cod_sotr', editable: true,  },
+            { key: false, name: 'Cod_sotr', index: 'Cod_sotr', editable: true  },
             { key: false, name: 'Fio', index: 'Fio', editable: true },
             { key: false, name: 'Ima', index: 'Ima', editable: true },
             { key: false, name: 'Otc', index: 'Otc', editable: true },
@@ -29,7 +29,7 @@
             Id: "0"
         },
         autowidth: true,
-        multiselect: false,
+        multiselect: false
     }).navGrid('#jqControls', {
         edit: true, add: true, del: true, search: true,
         searchtext: "Поиск сотрудника", refresh: true
@@ -63,7 +63,7 @@
             closeOnEscape: true,
             closeAfterDelete: true,
             recreateForm: true,
-            msg: "Вы действительно хотите удалить это запись?",
+            msg: "Вы действительно хотите удалить эту запись?",
             afterComplete: function (response) {
                 if (response.responseText) {
                     alert(response.responseText);

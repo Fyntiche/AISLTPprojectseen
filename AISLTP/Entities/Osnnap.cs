@@ -6,20 +6,14 @@ using System.Web;
 
 namespace AISLTP.Entities
 {
-    public class Nac
+    public class Osnnap
     {
+
         [Key]
         public int ID { get; set; }
 
         [Required(ErrorMessage = "Поле должно быть установлено")]
-        [Display( Name = "Национальность" )]
+        [Display(Name = "Основание для направления в ЛТП")]
         public string Txt { get; set; }
-
-        public virtual ICollection<Lico> Licos { get; set; }
-
-        public Nac()
-        {
-            Licos = new List<Lico>();
-        }
     }
 }

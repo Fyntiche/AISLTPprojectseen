@@ -29,10 +29,12 @@ namespace AISLTP.Entities
         [Display( Name = "Отчество" )]
         public string Otc { get; set; }
 
+        [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display( Name = "Дата рождения" )]
         [DataType( DataType.Date )]
         public DateTime Dr { get; set; }
 
+        [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display( Name = "Пол" )]
         public int? PolID { get; set; }
         public virtual Pol Pol { get; set; }
