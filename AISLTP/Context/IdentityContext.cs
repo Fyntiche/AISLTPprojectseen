@@ -24,6 +24,9 @@ namespace AISLTP.Context
         public DbSet<Prof> Profs { get; set; }
         public DbSet<Spec> Specs { get; set; }
         public DbSet<Court> Courts { get; set; }
+        public DbSet<Vidsv> Vidsvs { get; set; }
+        public DbSet<Viddebt> Viddebts { get; set; }
+        public DbSet<Otnosh> Otnoshs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

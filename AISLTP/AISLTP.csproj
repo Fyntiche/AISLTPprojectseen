@@ -160,11 +160,14 @@
     <Compile Include="Controllers\Sp\NpController.cs" />
     <Compile Include="Controllers\Sp\OblController.cs" />
     <Compile Include="Controllers\Sp\OsnnapController.cs" />
+    <Compile Include="Controllers\Sp\OtnoshController.cs" />
     <Compile Include="Controllers\Sp\ProfController.cs" />
     <Compile Include="Controllers\Sp\RnController.cs" />
     <Compile Include="Controllers\Sp\SotrController.cs" />
     <Compile Include="Controllers\Sp\SpController.cs" />
     <Compile Include="Controllers\Sp\SpecController.cs" />
+    <Compile Include="Controllers\Sp\ViddebtController.cs" />
+    <Compile Include="Controllers\Sp\VidsvController.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Court.cs" />
     <Compile Include="Entities\Doc.cs" />
@@ -173,6 +176,7 @@
     <Compile Include="Entities\Medcom.cs" />
     <Compile Include="Entities\Np.cs" />
     <Compile Include="Entities\Osnnap.cs" />
+    <Compile Include="Entities\Otnosh.cs" />
     <Compile Include="Entities\Prof.cs" />
     <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
@@ -181,6 +185,8 @@
     <Compile Include="Entities\Pol.cs" />
     <Compile Include="Entities\Sotr.cs" />
     <Compile Include="Entities\Spec.cs" />
+    <Compile Include="Entities\Viddebt.cs" />
+    <Compile Include="Entities\Vidsv.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -334,10 +340,13 @@
     <Content Include="Scripts\Sp\NpScript.js" />
     <Content Include="Scripts\Sp\OblScript.js" />
     <Content Include="Scripts\Sp\OsnnapScript.js" />
+    <Content Include="Scripts\Sp\OtnoshScript.js" />
     <Content Include="Scripts\Sp\ProfScript.js" />
     <Content Include="Scripts\Sp\RnScript.js" />
     <Content Include="Scripts\Sp\SotrScript.js" />
     <Content Include="Scripts\Sp\SpecScript.js" />
+    <Content Include="Scripts\Sp\ViddebtScript.js" />
+    <Content Include="Scripts\Sp\VidsvScript.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -372,6 +381,9 @@
     <Content Include="Views\Prof\Index.cshtml" />
     <Content Include="Views\Spec\Index.cshtml" />
     <Content Include="Views\Court\Index.cshtml" />
+    <Content Include="Views\Vidsv\Index.cshtml" />
+    <Content Include="Views\Viddebt\Index.cshtml" />
+    <Content Include="Views\Otnosh\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
