@@ -152,6 +152,7 @@
     <Compile Include="Controllers\Input\InputController.cs" />
     <Compile Include="Controllers\Journals registrations\AddressController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
+    <Compile Include="Controllers\Journals registrations\ProfsController.cs" />
     <Compile Include="Controllers\Sp\CourtController.cs" />
     <Compile Include="Controllers\Sp\DocController.cs" />
     <Compile Include="Controllers\Sp\EducController.cs" />
@@ -396,7 +397,6 @@
     <Content Include="Views\Osnnap\Index.cshtml" />
     <Content Include="Views\Doc\Index.cshtml" />
     <Content Include="Views\Educ\Index.cshtml" />
-    <Content Include="Views\Prof\Index.cshtml" />
     <Content Include="Views\Spec\Index.cshtml" />
     <Content Include="Views\Court\Index.cshtml" />
     <Content Include="Views\Vidsv\Index.cshtml" />
@@ -408,6 +408,9 @@
     <Content Include="Views\Samovol\Index.cshtml" />
     <Content Include="Views\UK\Index.cshtml" />
     <Content Include="Views\Koap\Index.cshtml" />
+    <Content Include="Views\Profs\Details.cshtml" />
+    <Content Include="Views\Profs\Edit.cshtml" />
+    <Content Include="Views\Profs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

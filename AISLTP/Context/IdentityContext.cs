@@ -41,6 +41,12 @@ namespace AISLTP.Context
                 .Map(t => t.MapLeftKey("AddressID")
                 .MapRightKey("LicoID")
                 .ToTable("Address_Lico"));
+
+            modelBuilder.Entity<Prof>().HasMany(c => c.Licos)
+                .WithMany(s => s.Profs)
+                .Map(t => t.MapLeftKey("ProfId")
+                .MapRightKey("LicoId")
+                .ToTable("ProfLico"));
         }
     }
 }

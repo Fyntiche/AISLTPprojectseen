@@ -66,10 +66,12 @@ namespace AISLTP.Entities
         public string Vneshnost { get; set; }
 
         public virtual ICollection<Address> Addresses { get; set; }
+        public virtual ICollection<Prof> Profs { get; set; }
 
         public Lico()
         {
             Addresses = new List<Address>();
+            Profs = new List<Prof>();
         }
     }
 }
