@@ -1,8 +1,10 @@
 ﻿using AISLTP.Context;
 using AISLTP.Entities;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Sp
@@ -14,7 +16,6 @@ namespace AISLTP.Controllers.Sp
         {
             return View();
         }
-
         public JsonResult GetKoap(string sidx, string sort, int page, int rows, bool _search, string searchField, string searchOper, string searchString)
         {
             ApplicationDbContext db = new ApplicationDbContext();
@@ -26,9 +27,10 @@ namespace AISLTP.Controllers.Sp
                     t => new
                     {
                         t.ID,
-                        t.Punkt,
-                        t.Chast,
-                        t.St,
+                        t.Point,
+                        t.Part,
+                        t.Article,
+                        t.Name,
                         t.Prim,
                     });
             if (_search)
@@ -36,7 +38,7 @@ namespace AISLTP.Controllers.Sp
                 switch (searchField)
                 {
                     case "Nom":
-                        KoapList = KoapList.Where(t => t.St.Contains(searchString));
+                        KoapList = KoapList.Where(t => t.Name.Contains(searchString));
                         break;
                 }
             }
@@ -44,12 +46,12 @@ namespace AISLTP.Controllers.Sp
             var totalPages = (int)Math.Ceiling((float)totalRecords / (float)rows);
             if (sort.ToUpper() == "DESC")
             {
-                KoapList = KoapList.OrderByDescending(t => t.St);
+                KoapList = KoapList.OrderByDescending(t => t.Name);
                 KoapList = KoapList.Skip(pageIndex * pageSize).Take(pageSize);
             }
             else
             {
-                KoapList = KoapList.OrderBy(t => t.St);
+                KoapList = KoapList.OrderBy(t => t.Name);
                 KoapList = KoapList.Skip(pageIndex * pageSize).Take(pageSize);
             }
             var jsonData = new

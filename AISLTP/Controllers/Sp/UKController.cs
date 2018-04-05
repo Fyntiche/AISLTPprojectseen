@@ -26,9 +26,10 @@ namespace AISLTP.Controllers.Sp
                     t => new
                     {
                         t.ID,
-                        t.Punkt,
-                        t.Chast,
-                        t.St,
+                        t.Point,
+                        t.Part,
+                        t.Article,
+                        t.Name,
                         t.Prim,
                     });
             if (_search)
@@ -36,7 +37,7 @@ namespace AISLTP.Controllers.Sp
                 switch (searchField)
                 {
                     case "Nom":
-                        UKList = UKList.Where(t => t.St.Contains(searchString));
+                        UKList = UKList.Where(t => t.Name.Contains(searchString));
                         break;
                 }
             }
@@ -44,12 +45,12 @@ namespace AISLTP.Controllers.Sp
             var totalPages = (int)Math.Ceiling((float)totalRecords / (float)rows);
             if (sort.ToUpper() == "DESC")
             {
-                UKList = UKList.OrderByDescending(t => t.St);
+                UKList = UKList.OrderByDescending(t => t.Name);
                 UKList = UKList.Skip(pageIndex * pageSize).Take(pageSize);
             }
             else
             {
-                UKList = UKList.OrderBy(t => t.St);
+                UKList = UKList.OrderBy(t => t.Name);
                 UKList = UKList.Skip(pageIndex * pageSize).Take(pageSize);
             }
             var jsonData = new

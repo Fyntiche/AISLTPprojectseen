@@ -27,7 +27,7 @@
         multiselect: false
     }).navGrid('#jqControls', {
         edit: true, add: true, del: true, search: true,
-        searchtext: "Поиск области", refresh: true
+        searchtext: "Поиск", refresh: true
     },
         {
             zIndex: 100,
