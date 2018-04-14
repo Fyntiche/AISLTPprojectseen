@@ -33,6 +33,7 @@ namespace AISLTP.Controllers.Journals_registrations
             ViewBag.Fam = lico.Fam;
             ViewBag.Ima = lico.Ima;
             ViewBag.Otc = lico.Otc;
+            Session["IDLico"] = lico.ID;
             return View(lico);
         }
 
@@ -53,6 +54,7 @@ namespace AISLTP.Controllers.Journals_registrations
             ViewBag.OblID = new SelectList(db.Obls, "ID", "Txt", lico.OblID);
             ViewBag.PolID = new SelectList(db.Pols, "ID", "Txt", lico.PolID);
             ViewBag.RnID = new SelectList(db.Rns, "ID", "Txt", lico.RnID);
+
             return View(lico);
         }
 
@@ -68,9 +70,13 @@ namespace AISLTP.Controllers.Journals_registrations
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> CreateAddress([Bind(Include = "ID,OblID,RnID,NpID,Ul,Dom,Korpus,Kvartira")] Address CreateAddress)
         {
+          
             if (ModelState.IsValid)
             {
-                db.Addresses.Add(CreateAddress);
+              
+               db.Licos.Find(Session["IDLico"]).Addresses.Add(CreateAddress);
+
+                //db.Addresses.Add(CreateAddress);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
