@@ -12,16 +12,17 @@ using AISLTP.Entities;
 
 namespace AISLTP.Controllers.Journals_registrations
 {
-    public class KoapsController : Controller
+    public class PriventsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Koaps
+        // GET: Privents
         public async Task<ActionResult> Index()
         {
             var licos = db.Licos.Include(l => l.Nac).Include(l => l.Np).Include(l => l.Obl).Include(l => l.Pol).Include(l => l.Rn);
             return View(await licos.ToListAsync());
         }
+
 
         public async Task<ActionResult> Show(int? id)
         {
@@ -41,10 +42,9 @@ namespace AISLTP.Controllers.Journals_registrations
             return View(lico);
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Show([Bind(Include = "ID,Point,Part,Article,Name,Fabula,Prim,CourtID,Fam,Ima,Otch,DateRe,Vidvz")] Lico lico)
+        public async Task<ActionResult> Show([Bind(Include = "ID,Data,Srok,Inspec,Fam,Ima,Otc,Tel")] Lico lico)
         {
             if (ModelState.IsValid)
             {
@@ -57,33 +57,33 @@ namespace AISLTP.Controllers.Journals_registrations
             return View(lico);
         }
 
-
-        public ActionResult CreateKoap()
+        public ActionResult CreatePrivent()
         {
-            ViewBag.CourtID = new SelectList(db.Courts, "ID", "Name");
+            
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateKoap([Bind(Include = "ID,Point,Part,Article,Name,Fabula,Prim,CourtID,Fam,Ima,Otch,DateRe,Vidvz")] Koap CreateKoap)
+        public async Task<ActionResult> CreatePrivent([Bind(Include = "ID,Data,Srok,Inspec,Fam,Ima,Otc,Tel")] Privent CreatePrivent)
         {
 
             if (ModelState.IsValid)
             {
 
-                db.Licos.Find(Session["IDLico"]).Koaps.Add(CreateKoap);
+                db.Licos.Find(Session["IDLico"]).Privents.Add(CreatePrivent);
 
                 //db.Addresses.Add(CreateAddress);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourtID = new SelectList(db.Courts, "ID", "Name", CreateKoap.CourtID);
-            return View(CreateKoap);
+            return View(CreatePrivent);
         }
 
+
+
+        
 
         protected override void Dispose(bool disposing)
         {

@@ -154,6 +154,7 @@
     <Compile Include="Controllers\Journals registrations\KoapsController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
     <Compile Include="Controllers\Journals registrations\MedicsController.cs" />
+    <Compile Include="Controllers\Journals registrations\PriventsController.cs" />
     <Compile Include="Controllers\Journals registrations\ProfsController.cs" />
     <Compile Include="Controllers\Journals registrations\SpecsController.cs" />
     <Compile Include="Controllers\Journals registrations\UKsController.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Entities\Osnprod.cs" />
     <Compile Include="Entities\Osnsocr.cs" />
     <Compile Include="Entities\Otnosh.cs" />
+    <Compile Include="Entities\Privent.cs" />
     <Compile Include="Entities\Prof.cs" />
     <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
@@ -431,6 +433,14 @@
     <Content Include="Views\Koaps\CreateKoap.cshtml" />
     <Content Include="Views\Koaps\Index.cshtml" />
     <Content Include="Views\Koaps\Show.cshtml" />
+    <Content Include="Views\Priventssss\Create.cshtml" />
+    <Content Include="Views\Priventssss\Delete.cshtml" />
+    <Content Include="Views\Priventssss\Details.cshtml" />
+    <Content Include="Views\Priventssss\Edit.cshtml" />
+    <Content Include="Views\Priventssss\Index.cshtml" />
+    <Content Include="Views\Privents\CreatePrivent.cshtml" />
+    <Content Include="Views\Privents\Index.cshtml" />
+    <Content Include="Views\Privents\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

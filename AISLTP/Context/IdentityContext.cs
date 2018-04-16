@@ -34,6 +34,7 @@ namespace AISLTP.Context
         public DbSet<UK> UKs { get; set; }
         public DbSet<Koap> Koaps { get; set; }
         public DbSet<Medic> Medics { get; set; }
+        public DbSet<Privent> Privents { get; set; }
 
 
 

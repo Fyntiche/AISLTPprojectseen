@@ -57,9 +57,6 @@ namespace AISLTP.Entities
         [Display(Name = "Вид административного взыскания")]
         public string Vidvz { get; set; }
 
-        [Display(Name = "Находится под превентивном надзором?")]
-        public bool? Sudim { get; set; }
-
         public ICollection<Lico> Licos { get; set; }
 
         public Koap()

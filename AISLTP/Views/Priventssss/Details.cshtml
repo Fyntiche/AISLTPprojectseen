@@ -1,0 +1,74 @@
+﻿@model AISLTP.Entities.Privent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Privent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Srok)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Srok)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inspec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inspec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Otc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Otc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
