@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AISLTP.Entities
 {
@@ -10,5 +11,12 @@ namespace AISLTP.Entities
         [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display(Name = "Специальность")]
         public string Txt { get; set; }
+
+        public virtual ICollection<Lico> Licos { get; set; }
+
+        public Spec()
+        {
+            Licos = new List<Lico>();
+        }
     }
 }

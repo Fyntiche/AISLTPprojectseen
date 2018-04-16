@@ -33,6 +33,9 @@ namespace AISLTP.Context
         public DbSet<Samovol> Samovols { get; set; }
         public DbSet<UK> UKs { get; set; }
         public DbSet<Koap> Koaps { get; set; }
+        public DbSet<Medic> Medics { get; set; }
+
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -47,6 +50,9 @@ namespace AISLTP.Context
                 .Map(t => t.MapLeftKey("ProfId")
                 .MapRightKey("LicoId")
                 .ToTable("ProfLico"));
+
+        
         }
+
     }
 }

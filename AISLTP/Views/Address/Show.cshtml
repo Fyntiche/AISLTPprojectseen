@@ -14,7 +14,6 @@
     <b><h2>@ViewBag.Fam @ViewBag.Ima @ViewBag.Otc:</h2></b>
     <hr />
     <h3>Адреса:</h3>
-    @ViewBag.ID
     <div class="">
         <ul>
             @foreach (Address c in Model.Addresses)
@@ -43,7 +42,9 @@
 }
 
 <div>
-    @Html.ActionLink( "Добавить адрес" , "CreateAddress", "Address")
+    @Html.ActionLink( "Добавить адрес" , "CreateAddress", "Address")<br />
+    @Html.ActionLink( "Назад" , "Index", "Address")
+
 </div>
 
 @section Scripts {

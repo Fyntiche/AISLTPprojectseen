@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
 namespace AISLTP.Entities
@@ -33,5 +34,12 @@ namespace AISLTP.Entities
 
         [Display(Name = "Электронная почта")]
         public string Email { get; set; }
+
+        public ICollection<UK> UKs { get; set; }
+
+        public Court()
+        {
+            UKs = new List<UK>();
+        }
     }
 }

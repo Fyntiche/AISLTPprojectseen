@@ -1,4 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
 namespace AISLTP.Entities
 {
@@ -7,8 +11,14 @@ namespace AISLTP.Entities
         [Key]
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Поле должно быть установлено")]
-        [Display(Name = "Медицинская коммисия")]
+        [Display(Name = "Мед. комиссия")]
         public string Txt { get; set; }
+
+        public ICollection<Medic> Medics { get; set; }
+
+        public Medcom()
+        {
+            Medics = new List<Medic>();
+        }
     }
 }

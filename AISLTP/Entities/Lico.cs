@@ -67,11 +67,18 @@ namespace AISLTP.Entities
 
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual ICollection<Prof> Profs { get; set; }
+        public virtual ICollection<Spec> Specs { get; set; }
+        public virtual ICollection<UK> UKs { get; set; }
+        public virtual ICollection<Medic> Medics { get; set; }
+
 
         public Lico()
         {
             Addresses = new List<Address>();
             Profs = new List<Prof>();
+            Specs = new List<Spec>();
+            UKs = new List<UK>();
+           // Medcoms = new List<Medcom>();
         }
     }
 }
