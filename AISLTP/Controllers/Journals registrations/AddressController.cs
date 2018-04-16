@@ -41,7 +41,7 @@ namespace AISLTP.Controllers.Journals_registrations
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Show([Bind(Include = "ID,Fam,Ima,Otc,Dr,PolID,Pasport,NacID,OblID,RnID,NpID,Vneshnost")] Lico lico)
+        public async Task<ActionResult> Show([Bind(Include = "ID,Fam,Ima,Otc,Dr,PolID,Pasport,NacID,OblID,RnID,NpID,Vneshnost,Prim")] Lico lico)
         {
             if (ModelState.IsValid)
             {
@@ -68,7 +68,7 @@ namespace AISLTP.Controllers.Journals_registrations
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateAddress([Bind(Include = "ID,OblID,RnID,NpID,Ul,Dom,Korpus,Kvartira")] Address CreateAddress)
+        public async Task<ActionResult> CreateAddress([Bind(Include = "ID,OblID,RnID,NpID,Ul,Dom,Korpus,Kvartira,Prim")] Address CreateAddress)
         {
           
             if (ModelState.IsValid)

@@ -433,11 +433,6 @@
     <Content Include="Views\Koaps\CreateKoap.cshtml" />
     <Content Include="Views\Koaps\Index.cshtml" />
     <Content Include="Views\Koaps\Show.cshtml" />
-    <Content Include="Views\Priventssss\Create.cshtml" />
-    <Content Include="Views\Priventssss\Delete.cshtml" />
-    <Content Include="Views\Priventssss\Details.cshtml" />
-    <Content Include="Views\Priventssss\Edit.cshtml" />
-    <Content Include="Views\Priventssss\Index.cshtml" />
     <Content Include="Views\Privents\CreatePrivent.cshtml" />
     <Content Include="Views\Privents\Index.cshtml" />
     <Content Include="Views\Privents\Show.cshtml" />

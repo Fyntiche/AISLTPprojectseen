@@ -37,6 +37,9 @@ namespace AISLTP.Entities
         [Display(Name = "Квартира")]
         public string Kvartira { get; set; }
 
+        [Display(Name = "Примечание")]
+        public string Prim { get; set; }
+
         public virtual ICollection<Lico> Licos { get; set; }
 
         public Address()

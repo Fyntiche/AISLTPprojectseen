@@ -17,23 +17,25 @@
     <div class="">
         <ul>
             @foreach (Address c in Model.Addresses)
-            {
-                @:
-                <b>Область: </b> @c.Obl.Txt
-                @:
-                <b>Район:</b> @c.Rn.Txt
-                @:
-                <b>Населенный пункт:</b> @c.Np.Txt
-                @:
-                <b>Улица:</b> @c.Ul
-                @:
-                <b>Дом:</b> @c.Dom
-                @:
-                <b>Корпус:</b> @c.Korpus
-                @:
-                <b>Квартира</b> @c.Kvartira
-                <hr />
-            }
+    {
+        @:
+        <b>Область: </b> @c.Obl.Txt
+        @:
+        <b>Район:</b> @c.Rn.Txt
+        @:
+        <b>Населенный пункт:</b> @c.Np.Txt
+        @:
+        <b>Улица:</b> @c.Ul
+        @:
+        <b>Дом:</b> @c.Dom
+        @:
+        <b>Корпус:</b> @c.Korpus
+        @:
+        <b>Квартира</b> @c.Kvartira
+        @:
+        <b>Примечание</b> @c.Prim
+        <hr />
+}
 
         </ul>
     </div>
