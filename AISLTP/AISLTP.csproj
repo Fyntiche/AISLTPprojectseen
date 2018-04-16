@@ -151,6 +151,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Input\InputController.cs" />
     <Compile Include="Controllers\Journals registrations\AddressController.cs" />
+    <Compile Include="Controllers\Journals registrations\EducsController.cs" />
     <Compile Include="Controllers\Journals registrations\KoapsController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
     <Compile Include="Controllers\Journals registrations\MedicsController.cs" />
@@ -436,6 +437,14 @@
     <Content Include="Views\Privents\CreatePrivent.cshtml" />
     <Content Include="Views\Privents\Index.cshtml" />
     <Content Include="Views\Privents\Show.cshtml" />
+    <Content Include="Views\Educsssses\Create.cshtml" />
+    <Content Include="Views\Educsssses\Delete.cshtml" />
+    <Content Include="Views\Educsssses\Details.cshtml" />
+    <Content Include="Views\Educsssses\Edit.cshtml" />
+    <Content Include="Views\Educsssses\Index.cshtml" />
+    <Content Include="Views\Educs\Details.cshtml" />
+    <Content Include="Views\Educs\Edit.cshtml" />
+    <Content Include="Views\Educs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

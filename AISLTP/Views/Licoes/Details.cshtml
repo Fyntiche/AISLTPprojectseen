@@ -145,6 +145,33 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingNine">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            Образования:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Educ c in Model.Educs)
+    {
+
+                        <li> @c.Txt</li>
+
+}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
@@ -363,32 +390,32 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Privent c in Model.Privents)
-        {
-                    @:
-                    <b>Дата установления: </b> @c.Data.ToShortDateString()
+                    {
+                        @:
+                        <b>Дата установления: </b> @c.Data.ToShortDateString()
 
-                    @:
-                    <b>Срок: </b> @c.Srok
-                    <br />
-                    @:
-                    <b>Уголовно-исполнительная инспекция осуществляющая контроль: </b> @c.Inspec
-                    <br />
+                        @:
+                        <b>Срок: </b> @c.Srok
+                        <br />
+                        @:
+                        <b>Уголовно-исполнительная инспекция осуществляющая контроль: </b> @c.Inspec
+                        <br />
 
-                    @:
-                    <b>Фамилия ответственого сотрудника: </b> @c.Fam
+                        @:
+                        <b>Фамилия ответственого сотрудника: </b> @c.Fam
 
-                    @:
-                    <b>Имя ответственого сотрудника: </b> @c.Ima
+                        @:
+                        <b>Имя ответственого сотрудника: </b> @c.Ima
 
-                    @:
-                    <b>Отчество ответственого сотрудника: </b> @c.Otc
-                    <br />
+                        @:
+                        <b>Отчество ответственого сотрудника: </b> @c.Otc
+                        <br />
 
-                    @:
-                    <b>Телефон ответственого сотрудника: </b> @c.Tel
+                        @:
+                        <b>Телефон ответственого сотрудника: </b> @c.Tel
 
-                    <hr />
-}
+                        <hr />
+            }
 
                         </ul>
                     </div>
@@ -402,6 +429,5 @@
 </div>
 
 <p>
-    @Html.ActionLink("Редактировать", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Назад", "Index")
 </p>

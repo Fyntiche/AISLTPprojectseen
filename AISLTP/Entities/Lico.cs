@@ -72,6 +72,7 @@ namespace AISLTP.Entities
         public virtual ICollection<Koap> Koaps { get; set; }
         public virtual ICollection<Medic> Medics { get; set; }
         public virtual ICollection<Privent> Privents { get; set; }
+        public virtual ICollection<Educ> Educs { get; set; }
 
 
         public Lico()
@@ -82,6 +83,7 @@ namespace AISLTP.Entities
             UKs = new List<UK>();
             Koaps = new List<Koap>();
             Privents = new List<Privent>();
+            Educs = new List<Educ>();
         }
     }
 }
