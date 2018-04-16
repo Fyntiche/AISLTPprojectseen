@@ -37,6 +37,7 @@ namespace AISLTP.Context
         public DbSet<Privent> Privents { get; set; }
         public DbSet<Naprav> Napravs { get; set; }
         public DbSet<Objal> Objals { get; set; }
+        public DbSet<Otrad> Otrads { get; set; }
 
 
 

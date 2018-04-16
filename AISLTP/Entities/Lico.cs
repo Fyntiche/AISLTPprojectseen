@@ -75,6 +75,7 @@ namespace AISLTP.Entities
         public virtual ICollection<Educ> Educs { get; set; }
         public virtual ICollection<Naprav> Napravs { get; set; }
         public virtual ICollection<Objal> Objals { get; set; }
+        public virtual ICollection<Otrad> Otrads { get; set; }
 
         public Lico()
         {
@@ -87,6 +88,8 @@ namespace AISLTP.Entities
             Educs = new List<Educ>();
             Napravs = new List<Naprav>();
             Objals = new List<Objal>();
+            Otrads = new List<Otrad>();
+            
         }
     }
 }
