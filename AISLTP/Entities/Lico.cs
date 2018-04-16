@@ -69,6 +69,7 @@ namespace AISLTP.Entities
         public virtual ICollection<Prof> Profs { get; set; }
         public virtual ICollection<Spec> Specs { get; set; }
         public virtual ICollection<UK> UKs { get; set; }
+        public virtual ICollection<Koap> Koaps { get; set; }
         public virtual ICollection<Medic> Medics { get; set; }
 
 
@@ -78,6 +79,7 @@ namespace AISLTP.Entities
             Profs = new List<Prof>();
             Specs = new List<Spec>();
             UKs = new List<UK>();
+            Koaps = new List<Koap>();
            // Medcoms = new List<Medcom>();
         }
     }

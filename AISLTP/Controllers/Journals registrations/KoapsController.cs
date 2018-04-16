@@ -12,11 +12,11 @@ using AISLTP.Entities;
 
 namespace AISLTP.Controllers.Journals_registrations
 {
-    public class UKsController : Controller
+    public class KoapsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: UKs
+        // GET: Koaps
         public async Task<ActionResult> Index()
         {
             var licos = db.Licos.Include(l => l.Nac).Include(l => l.Np).Include(l => l.Obl).Include(l => l.Pol).Include(l => l.Rn);
@@ -44,7 +44,7 @@ namespace AISLTP.Controllers.Journals_registrations
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Show([Bind(Include = "ID,Point,Part,Article,Name,Fabula,Prim,CourtID,Fam,Ima,Otch,DatePrig,Location,Sudim")] Lico lico)
+        public async Task<ActionResult> Show([Bind(Include = "ID,Point,Part,Article,Name,Fabula,Prim,CourtID,Fam,Ima,Otch,DateRe,Vidvz,Sudim")] Lico lico)
         {
             if (ModelState.IsValid)
             {
@@ -58,30 +58,32 @@ namespace AISLTP.Controllers.Journals_registrations
         }
 
 
-        public ActionResult CreateUK()
+        public ActionResult CreateKoap()
         {
             ViewBag.CourtID = new SelectList(db.Courts, "ID", "Name");
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateUK([Bind(Include = "ID,Point,Part,Article,Name,Fabula,Prim,CourtID,Fam,Ima,Otch,DatePrig,Location,Sudim")] UK CreateUK)
+        public async Task<ActionResult> CreateKoap([Bind(Include = "ID,Point,Part,Article,Name,Fabula,Prim,CourtID,Fam,Ima,Otch,DateRe,Vidvz,Sudim")] Koap CreateKoap)
         {
 
             if (ModelState.IsValid)
             {
 
-                db.Licos.Find(Session["IDLico"]).UKs.Add(CreateUK);
+                db.Licos.Find(Session["IDLico"]).Koaps.Add(CreateKoap);
 
                 //db.Addresses.Add(CreateAddress);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourtID = new SelectList(db.Courts, "ID", "Name", CreateUK.CourtID);
-            return View(CreateUK);
+            ViewBag.CourtID = new SelectList(db.Courts, "ID", "Name", CreateKoap.CourtID);
+            return View(CreateKoap);
         }
+
 
         protected override void Dispose(bool disposing)
         {

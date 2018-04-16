@@ -151,6 +151,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Input\InputController.cs" />
     <Compile Include="Controllers\Journals registrations\AddressController.cs" />
+    <Compile Include="Controllers\Journals registrations\KoapsController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
     <Compile Include="Controllers\Journals registrations\MedicsController.cs" />
     <Compile Include="Controllers\Journals registrations\ProfsController.cs" />
@@ -405,7 +406,6 @@
     <Content Include="Views\Osnsocr\Index.cshtml" />
     <Content Include="Views\Osnprod\Index.cshtml" />
     <Content Include="Views\Samovol\Index.cshtml" />
-    <Content Include="Views\Koap\Index.cshtml" />
     <Content Include="Views\Profs\Details.cshtml" />
     <Content Include="Views\Profs\Edit.cshtml" />
     <Content Include="Views\Profs\Index.cshtml" />
@@ -420,14 +420,17 @@
     <Content Include="Views\Medics\Show.cshtml" />
     <Content Include="Views\Medics\Index.cshtml" />
     <Content Include="Views\Medics\CreateMedic.cshtml" />
-    <Content Include="Views\UKssssss\Create.cshtml" />
-    <Content Include="Views\UKssssss\Delete.cshtml" />
-    <Content Include="Views\UKssssss\Details.cshtml" />
-    <Content Include="Views\UKssssss\Edit.cshtml" />
-    <Content Include="Views\UKssssss\Index.cshtml" />
     <Content Include="Views\UKs\CreateUK.cshtml" />
     <Content Include="Views\UKs\Index.cshtml" />
     <Content Include="Views\UKs\Show.cshtml" />
+    <Content Include="Views\Koapssss\Create.cshtml" />
+    <Content Include="Views\Koapssss\Delete.cshtml" />
+    <Content Include="Views\Koapssss\Details.cshtml" />
+    <Content Include="Views\Koapssss\Edit.cshtml" />
+    <Content Include="Views\Koapssss\Index.cshtml" />
+    <Content Include="Views\Koaps\CreateKoap.cshtml" />
+    <Content Include="Views\Koaps\Index.cshtml" />
+    <Content Include="Views\Koaps\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -17,56 +17,26 @@
 
         <div class="">
             <ul>
-                @foreach (UK c in Model.UKs)
+                @foreach (Medic c in Model.Medics)
                 {
                     @:
-                    <b>Пункт УК: </b> @c.Point
+                    <b>Медицинская комиссия: </b> @c.MedcomId
 
                     @:
-                    <b>Часть УК: </b> @c.Part
+                    <b>Дата: </b> @c.Date.ToShortDateString()
 
                     @:
-                    <b>Статья УК: </b> @c.Article
-
-                    @:
-                    <b>Название: </b> @c.Name
+                    <b>Результат: </b> @c.Result
                     <br />
                     @:
-                    <b>Фабула: </b> @c.Fabula
+                    <b>Фамилия врача: </b> @c.Fam
 
                     @:
-                    <b>Примечания: </b> @c.Prim
+                    <b>Имя врача: </b> @c.Ima
+
+                    @:
+                    <b>Отчество врача: </b> @c.Otch
                     <br />
-                    @:
-                    <b>Дата совершения: </b> @c.DateSov.ToShortDateString()
-
-                    @:
-                    <b>Дата вынесения приговора: </b> @c.DatePrig.ToShortDateString()
-
-                    @:
-                    <b>Суд вынесший решение: </b> @c.Court.Name
-
-                    @:
-                    <b>Фамилия судьи: </b> @c.Fam
-
-                    @:
-                    <b>Имя судьи: </b> @c.Ima
-
-                    @:
-                    <b>Отчество: </b> @c.Otch
-                    <br />
-                    @:
-                    <b>Местро отбывания наказания: </b> @c.Location
-
-                    @:
-                    <b>Имеется ли не снятая или непогашенная судимость?: </b> @c.Sudim
-
-
-
-
-
-
-
                     <hr />
                 }
 
