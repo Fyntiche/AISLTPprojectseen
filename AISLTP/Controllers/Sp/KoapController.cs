@@ -1,10 +1,8 @@
 ﻿using AISLTP.Context;
 using AISLTP.Entities;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Sp
@@ -16,6 +14,7 @@ namespace AISLTP.Controllers.Sp
         {
             return View();
         }
+
         public JsonResult GetKoap(string sidx, string sort, int page, int rows, bool _search, string searchField, string searchOper, string searchString)
         {
             ApplicationDbContext db = new ApplicationDbContext();

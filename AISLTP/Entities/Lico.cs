@@ -74,7 +74,6 @@ namespace AISLTP.Entities
         public virtual ICollection<Privent> Privents { get; set; }
         public virtual ICollection<Educ> Educs { get; set; }
 
-
         public Lico()
         {
             Addresses = new List<Address>();

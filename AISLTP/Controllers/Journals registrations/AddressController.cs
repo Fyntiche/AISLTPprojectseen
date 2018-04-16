@@ -70,11 +70,9 @@ namespace AISLTP.Controllers.Journals_registrations
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> CreateAddress([Bind(Include = "ID,OblID,RnID,NpID,Ul,Dom,Korpus,Kvartira,Prim")] Address CreateAddress)
         {
-          
             if (ModelState.IsValid)
             {
-              
-               db.Licos.Find(Session["IDLico"]).Addresses.Add(CreateAddress);
+                db.Licos.Find(Session["IDLico"]).Addresses.Add(CreateAddress);
 
                 //db.Addresses.Add(CreateAddress);
                 await db.SaveChangesAsync();

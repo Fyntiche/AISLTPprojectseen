@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AISLTP.Context;
+﻿using AISLTP.Context;
 using AISLTP.Entities;
+using System.Data.Entity;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Journals_registrations
 {
@@ -54,7 +49,6 @@ namespace AISLTP.Controllers.Journals_registrations
                 return RedirectToAction("Index");
             }
 
-
             return View(lico);
         }
 
@@ -68,10 +62,8 @@ namespace AISLTP.Controllers.Journals_registrations
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> CreateMedic([Bind(Include = "ID,MedcomId,Date,Result,Fam,Ima,Otch")] Medic CreateMedic)
         {
-
             if (ModelState.IsValid)
             {
-
                 db.Licos.Find(Session["IDLico"]).Medics.Add(CreateMedic);
 
                 //db.Addresses.Add(CreateAddress);
@@ -82,10 +74,6 @@ namespace AISLTP.Controllers.Journals_registrations
             ViewBag.MedcomId = new SelectList(db.Medcoms, "ID", "Txt", CreateMedic.MedcomId);
             return View(CreateMedic);
         }
-
-       
-
-       
 
         protected override void Dispose(bool disposing)
         {

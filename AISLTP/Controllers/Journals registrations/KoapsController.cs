@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AISLTP.Context;
+﻿using AISLTP.Context;
 using AISLTP.Entities;
+using System.Data.Entity;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Journals_registrations
 {
@@ -41,7 +36,6 @@ namespace AISLTP.Controllers.Journals_registrations
             return View(lico);
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Show([Bind(Include = "ID,Point,Part,Article,Name,Fabula,Prim,CourtID,Fam,Ima,Otch,DateRe,Vidvz")] Lico lico)
@@ -53,10 +47,8 @@ namespace AISLTP.Controllers.Journals_registrations
                 return RedirectToAction("Index");
             }
 
-
             return View(lico);
         }
-
 
         public ActionResult CreateKoap()
         {
@@ -64,15 +56,12 @@ namespace AISLTP.Controllers.Journals_registrations
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> CreateKoap([Bind(Include = "ID,Point,Part,Article,Name,Fabula,Prim,CourtID,Fam,Ima,Otch,DateRe,Vidvz")] Koap CreateKoap)
         {
-
             if (ModelState.IsValid)
             {
-
                 db.Licos.Find(Session["IDLico"]).Koaps.Add(CreateKoap);
 
                 //db.Addresses.Add(CreateAddress);
@@ -83,7 +72,6 @@ namespace AISLTP.Controllers.Journals_registrations
             ViewBag.CourtID = new SelectList(db.Courts, "ID", "Name", CreateKoap.CourtID);
             return View(CreateKoap);
         }
-
 
         protected override void Dispose(bool disposing)
         {

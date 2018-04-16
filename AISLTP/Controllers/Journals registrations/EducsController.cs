@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AISLTP.Context;
+using AISLTP.Entities;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using AISLTP.Context;
-using AISLTP.Entities;
 
 namespace AISLTP.Controllers.Journals_registrations
 {
@@ -46,7 +42,6 @@ namespace AISLTP.Controllers.Journals_registrations
             return View(lico);
         }
 
-
         [HttpPost]
         public ActionResult Edit(Lico lico, int[] selectedEducs)
         {
@@ -69,11 +64,6 @@ namespace AISLTP.Controllers.Journals_registrations
             db.SaveChanges();
             return RedirectToAction("Details", new { Id = newLico.ID });
         }
-
-
-
-
-        
 
         protected override void Dispose(bool disposing)
         {

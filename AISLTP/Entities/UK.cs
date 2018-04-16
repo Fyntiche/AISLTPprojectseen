@@ -33,7 +33,6 @@ namespace AISLTP.Entities
         [Display(Name = "Примечание")]
         public string Prim { get; set; }
 
-
         [Display(Name = "Суд вынесший решение")]
         public int? CourtID { get; set; }
 

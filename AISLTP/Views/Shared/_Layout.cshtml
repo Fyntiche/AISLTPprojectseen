@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    @Styles.Render( "~/Content/css" )
-    @Scripts.Render( "~/bundles/modernizr" )
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,12 +24,12 @@
                     <div class="navbar-header">
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li> @Html.ActionLink( "АИСЛТП" , "Index" , "Home" , new { area = "" } , new { @class = "navbar-brand" } )</li>
+                                <li> @Html.ActionLink("АИСЛТП", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                             </ul>
                             <ul class="nav navbar-nav">
 
-                                <li>  @Html.ActionLink( "Главная" , "Index" , "Home" ) </li>
-                                <li>  @Html.ActionLink( "Поиск" , "Index" , "Search" ) </li>
+                                <li>  @Html.ActionLink("Главная", "Index", "Home") </li>
+                                <li>  @Html.ActionLink("Поиск", "Index", "Search") </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Журналы учета <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -51,7 +51,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Вспомогательные журналы<b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li>@Html.ActionLink( "Справочники" , "Index" , "Sp" )</li>
+                                        <li>@Html.ActionLink("Справочники", "Index", "Sp")</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -69,8 +69,8 @@
         </footer>
     </div>
 
-    @Scripts.Render( "~/bundles/jquery" )
-    @Scripts.Render( "~/bundles/bootstrap" )
-    @RenderSection( "scripts" , required: false )
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Entities
@@ -34,7 +32,6 @@ namespace AISLTP.Entities
 
         [Display(Name = "Примечание")]
         public string Prim { get; set; }
-
 
         [Display(Name = "Суд вынесший решение")]
         public int? CourtID { get; set; }

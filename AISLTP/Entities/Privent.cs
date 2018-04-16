@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Entities
@@ -47,7 +45,6 @@ namespace AISLTP.Entities
         [StringLength(255, ErrorMessage = "Длина строки должна до 255 символов")]
         [Display(Name = "Телефон")]
         public string Tel { get; set; }
-
 
         public ICollection<Lico> Licos { get; set; }
 

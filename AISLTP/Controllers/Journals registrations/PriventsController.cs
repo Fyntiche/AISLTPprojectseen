@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AISLTP.Context;
+﻿using AISLTP.Context;
 using AISLTP.Entities;
+using System.Data.Entity;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Journals_registrations
 {
@@ -22,7 +17,6 @@ namespace AISLTP.Controllers.Journals_registrations
             var licos = db.Licos.Include(l => l.Nac).Include(l => l.Np).Include(l => l.Obl).Include(l => l.Pol).Include(l => l.Rn);
             return View(await licos.ToListAsync());
         }
-
 
         public async Task<ActionResult> Show(int? id)
         {
@@ -53,13 +47,11 @@ namespace AISLTP.Controllers.Journals_registrations
                 return RedirectToAction("Index");
             }
 
-
             return View(lico);
         }
 
         public ActionResult CreatePrivent()
         {
-            
             return View();
         }
 
@@ -67,10 +59,8 @@ namespace AISLTP.Controllers.Journals_registrations
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> CreatePrivent([Bind(Include = "ID,Data,Srok,Inspec,Fam,Ima,Otc,Tel")] Privent CreatePrivent)
         {
-
             if (ModelState.IsValid)
             {
-
                 db.Licos.Find(Session["IDLico"]).Privents.Add(CreatePrivent);
 
                 //db.Addresses.Add(CreateAddress);
@@ -80,10 +70,6 @@ namespace AISLTP.Controllers.Journals_registrations
 
             return View(CreatePrivent);
         }
-
-
-
-        
 
         protected override void Dispose(bool disposing)
         {

@@ -17,7 +17,6 @@ namespace AISLTP.Entities
         public Educ()
         {
             Licos = new List<Lico>();
-
         }
     }
 }

@@ -1,11 +1,8 @@
 ﻿using AISLTP.Context;
 using AISLTP.Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Journals_registrations
@@ -13,6 +10,7 @@ namespace AISLTP.Controllers.Journals_registrations
     public class SpecsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
         // GET: Spec
         public async Task<ActionResult> Index()
         {
@@ -30,7 +28,6 @@ namespace AISLTP.Controllers.Journals_registrations
             }
             return View(lico);
         }
-
 
         public ActionResult Edit(int id = 0)
         {
