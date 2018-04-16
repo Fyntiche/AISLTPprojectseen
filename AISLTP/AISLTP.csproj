@@ -154,6 +154,7 @@
     <Compile Include="Controllers\Journals registrations\EducsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\JournalLTPController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\NapravsController.cs" />
+    <Compile Include="Controllers\Journals registrations\JournalLTP\ObjalsController.cs" />
     <Compile Include="Controllers\Journals registrations\KoapsController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
     <Compile Include="Controllers\Journals registrations\MedicsController.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Entities\Medic.cs" />
     <Compile Include="Entities\Naprav.cs" />
     <Compile Include="Entities\Np.cs" />
+    <Compile Include="Entities\Objal.cs" />
     <Compile Include="Entities\Osndosr.cs" />
     <Compile Include="Entities\Osnnap.cs" />
     <Compile Include="Entities\Osnprod.cs" />
@@ -452,6 +454,9 @@
     <Content Include="Views\JournalLTP\Index.cshtml" />
     <Content Include="Views\Napravs\Show.cshtml" />
     <Content Include="Views\Napravs\CreateNaprav.cshtml" />
+    <Content Include="Views\Objals\Index.cshtml" />
+    <Content Include="Views\Objals\CreateObjal.cshtml" />
+    <Content Include="Views\Objals\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
