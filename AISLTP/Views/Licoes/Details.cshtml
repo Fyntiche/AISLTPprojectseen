@@ -122,25 +122,25 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Address c in Model.Addresses)
-                            {
-                                @:
-                                <b>Область: </b> @c.Obl.Txt
-                                @:
-                                <b>Район:</b> @c.Rn.Txt
-                                @:
-                                <b>Населенный пункт:</b> @c.Np.Txt
-                                @:
-                                <b>Улица:</b> @c.Ul
-                                @:
-                                <b>Дом:</b> @c.Dom
-                                @:
-                                <b>Корпус:</b> @c.Korpus
-                                @:
-                                <b>Квартира</b> @c.Kvartira
-                                @:
-                                <b>Примечание</b> @c.Prim
-                                <hr />
-                            }
+                    {
+                        @:
+                        <b>Область: </b> @c.Obl.Txt
+                        @:
+                        <b>Район:</b> @c.Rn.Txt
+                        @:
+                        <b>Населенный пункт:</b> @c.Np.Txt
+                        @:
+                        <b>Улица:</b> @c.Ul
+                        @:
+                        <b>Дом:</b> @c.Dom
+                        @:
+                        <b>Корпус:</b> @c.Korpus
+                        @:
+                        <b>Квартира</b> @c.Kvartira
+                        @:
+                        <b>Примечание</b> @c.Prim
+                        <hr />
+            }
                         </ul>
                     </div>
                 </div>
@@ -158,11 +158,11 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Educ c in Model.Educs)
-                            {
+                    {
 
-                                <li> @c.Txt</li>
+                        <li> @c.Txt</li>
 
-                            }
+            }
                         </ul>
                     </div>
                 </div>
@@ -180,11 +180,11 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Prof c in Model.Profs)
-                            {
+                    {
 
-                                <li> @c.Txt</li>
+                        <li> @c.Txt</li>
 
-                            }
+            }
                         </ul>
                     </div>
                 </div>
@@ -201,11 +201,11 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Spec c in Model.Specs)
-                            {
+                    {
 
-                                <li> @c.Txt</li>
+                        <li> @c.Txt</li>
 
-                            }
+            }
                         </ul>
                     </div>
                 </div>
@@ -223,48 +223,48 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (UK c in Model.UKs)
-                            {
-                                @:
-                                <b>Пункт УК: </b> @c.Point
+                    {
+                        @:
+                        <b>Пункт УК: </b> @c.Point
 
-                                @:
-                                <b>Часть УК: </b> @c.Part
+                        @:
+                        <b>Часть УК: </b> @c.Part
 
-                                @:
-                                <b>Статья УК: </b> @c.Article
+                        @:
+                        <b>Статья УК: </b> @c.Article
 
-                                @:
-                                <b>Название: </b> @c.Name
-                                <br />
-                                @:
-                                <b>Фабула: </b> @c.Fabula
-                                <br />
-                                @:
-                                <b>Примечания: </b> @c.Prim
-                                <br />
+                        @:
+                        <b>Название: </b> @c.Name
+                        <br />
+                        @:
+                        <b>Фабула: </b> @c.Fabula
+                        <br />
+                        @:
+                        <b>Примечания: </b> @c.Prim
+                        <br />
 
-                                @:
-                                <b>Дата вынесения приговора: </b> @c.DatePrig.ToShortDateString()
-                                <br />
-                                @:
-                                <b>Суд вынесший решение: </b> @c.Court.Name
+                        @:
+                        <b>Дата вынесения приговора: </b> @c.DatePrig.ToShortDateString()
+                        <br />
+                        @:
+                        <b>Суд вынесший решение: </b> @c.Court.Name
 
-                                @:
-                                <b>Фамилия судьи: </b> @c.Fam
+                        @:
+                        <b>Фамилия судьи: </b> @c.Fam
 
-                                @:
-                                <b>Имя судьи: </b> @c.Ima
+                        @:
+                        <b>Имя судьи: </b> @c.Ima
 
-                                @:
-                                <b>Отчество: </b> @c.Otch
-                                <br />
-                                @:
-                                <b>Местро отбывания наказания: </b> @c.Location
-                                <br />
-                                @:
-                                <b>Имеется ли не снятая или непогашенная судимость?: </b> @c.Sudim
-                                <hr />
-                            }
+                        @:
+                        <b>Отчество: </b> @c.Otch
+                        <br />
+                        @:
+                        <b>Местро отбывания наказания: </b> @c.Location
+                        <br />
+                        @:
+                        <b>Имеется ли не снятая или непогашенная судимость?: </b> @c.Sudim
+                        <hr />
+            }
                         </ul>
                     </div>
                 </div>
@@ -282,46 +282,46 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Koap c in Model.Koaps)
-                            {
-                                @:
-                                <b>Пункт КоАП: </b> @c.Point
+                    {
+                        @:
+                        <b>Пункт КоАП: </b> @c.Point
 
-                                @:
-                                <b>Часть КоАП: </b> @c.Part
+                        @:
+                        <b>Часть КоАП: </b> @c.Part
 
-                                @:
-                                <b>Статья КоАП: </b> @c.Article
+                        @:
+                        <b>Статья КоАП: </b> @c.Article
 
-                                @:
-                                <b>Название: </b> @c.Name
-                                <br />
-                                @:
-                                <b>Фабула: </b> @c.Fabula
-                                <br />
-                                @:
-                                <b>Примечания: </b> @c.Prim
-                                <br />
+                        @:
+                        <b>Название: </b> @c.Name
+                        <br />
+                        @:
+                        <b>Фабула: </b> @c.Fabula
+                        <br />
+                        @:
+                        <b>Примечания: </b> @c.Prim
+                        <br />
 
-                                @:
-                                <b>Дата решения: </b> @c.DateRe.ToShortDateString()
-                                <br />
-                                @:
-                                <b>Суд вынесший решение: </b> @c.Court.Name
+                        @:
+                        <b>Дата решения: </b> @c.DateRe.ToShortDateString()
+                        <br />
+                        @:
+                        <b>Суд вынесший решение: </b> @c.Court.Name
 
-                                @:
-                                <b>Фамилия судьи: </b> @c.Fam
+                        @:
+                        <b>Фамилия судьи: </b> @c.Fam
 
-                                @:
-                                <b>Имя судьи: </b> @c.Ima
+                        @:
+                        <b>Имя судьи: </b> @c.Ima
 
-                                @:
-                                <b>Отчество: </b> @c.Otch
-                                <br />
-                                @:
-                                <b>Вид административного взыскания: </b> @c.Vidvz
+                        @:
+                        <b>Отчество: </b> @c.Otch
+                        <br />
+                        @:
+                        <b>Вид административного взыскания: </b> @c.Vidvz
 
-                                <hr />
-                            }
+                        <hr />
+            }
                         </ul>
                     </div>
                 </div>
@@ -339,27 +339,123 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Medic c in Model.Medics)
-                            {
-                                @:
-                                <b>Медицинская комиссия: </b> @c.MedcomId
+                    {
+                        @:
+                        <b>Медицинская комиссия: </b> @c.MedcomId
 
-                                @:
-                                <b>Дата: </b> @c.Date.ToShortDateString()
+                        @:
+                        <b>Дата: </b> @c.Date.ToShortDateString()
 
-                                @:
-                                <b>Результат: </b> @c.Result
-                                <br />
-                                @:
-                                <b>Фамилия врача: </b> @c.Fam
+                        @:
+                        <b>Результат: </b> @c.Result
+                        <br />
+                        @:
+                        <b>Фамилия врача: </b> @c.Fam
 
-                                @:
-                                <b>Имя врача: </b> @c.Ima
+                        @:
+                        <b>Имя врача: </b> @c.Ima
 
-                                @:
-                                <b>Отчество врача: </b> @c.Otch
-                                <br />
-                                <hr />
-                            }
+                        @:
+                        <b>Отчество врача: </b> @c.Otch
+                        <br />
+                        <hr />
+            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTen">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            Доставление/оформление лица:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Naprav c in Model.Napravs)
+                    {
+                        @:
+                        <b>Основания направления: </b> @c.Osnnap.Txt
+
+                        @:
+                        <b>Дата помещения в ЛТП: </b> @c.DataPom.ToShortDateString()
+                        <br />
+                        <br />
+                        @:
+                        <b>Фамилия сотрудника, доставивший лицо: </b> @c.FamD
+                        <br />
+                        @:
+                        <b>Имя сотрудника, доставившего лицо: </b> @c.ImaD
+                        <br />
+                        @:
+                        <b>Отчество сотрудника, доставившего лицо: </b> @c.OtcD
+                        <br />
+                        @:
+                        <b>Телефон сотрудника, доставившего лицо: </b> @c.TelD
+                        <br />
+                        <br />
+
+                        @:
+                        <b>Фамилия сотрудника, оформившего лицо: </b> @c.FamO
+                        <br />
+                        @:
+                        <b>Имя сотрудника, оформившего лицо: </b> @c.ImaO
+                        <br />
+                        @:
+                        <b>Отчество сотрудника, оформившего лицо: </b> @c.OtcO
+                        <br />
+                        @:
+                        <b>Телефон сотрудника, оформившего лицо: </b> @c.TelO
+                        <br />
+                        <hr />
+            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingEleven">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                            Обжалования решения о направлении в ЛТП:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Objal c in Model.Objals)
+                    {
+                        @:
+                        <b>Фамилия подавшего заявление: </b> @c.Fam
+                        <br />
+                        @:
+                        <b>Имя подавшего заявление: </b> @c.Ima
+                        <br />
+                        @:
+                        <b>Отчество подавшего заявление: </b> @c.Otch
+                        <br />
+                        @:
+                        <b>Телефон подавшего заявление: </b> @c.Tel
+
+                        @:
+                        <b>Дата обжалования: </b> @c.Date.ToShortDateString()
+
+                        @:
+                        <b>Результат: </b> @c.Result
+                        <br />
+                        @:
+                        <b>Во время нахождения в ЛТП: </b> @c.Locat
+
+                        <hr />
+            }
                         </ul>
                     </div>
                 </div>
@@ -377,36 +473,115 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Privent c in Model.Privents)
-                            {
-                                @:
-                                <b>Дата установления: </b> @c.Data.ToShortDateString()
+                    {
+                        @:
+                        <b>Дата установления: </b> @c.Data.ToShortDateString()
 
-                                @:
-                                <b>Срок: </b> @c.Srok
-                                <br />
-                                @:
-                                <b>Уголовно-исполнительная инспекция осуществляющая контроль: </b> @c.Inspec
-                                <br />
+                        @:
+                        <b>Срок: </b> @c.Srok
+                        <br />
+                        @:
+                        <b>Уголовно-исполнительная инспекция осуществляющая контроль: </b> @c.Inspec
+                        <br />
 
-                                @:
-                                <b>Фамилия ответственого сотрудника: </b> @c.Fam
+                        @:
+                        <b>Фамилия ответственого сотрудника: </b> @c.Fam
 
-                                @:
-                                <b>Имя ответственого сотрудника: </b> @c.Ima
+                        @:
+                        <b>Имя ответственого сотрудника: </b> @c.Ima
 
-                                @:
-                                <b>Отчество ответственого сотрудника: </b> @c.Otc
-                                <br />
+                        @:
+                        <b>Отчество ответственого сотрудника: </b> @c.Otc
+                        <br />
 
-                                @:
-                                <b>Телефон ответственого сотрудника: </b> @c.Tel
+                        @:
+                        <b>Телефон ответственого сотрудника: </b> @c.Tel
 
-                                <hr />
-                            }
+                        <hr />
+            }
                         </ul>
                     </div>
                 </div>
             </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTvelve">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTvelve" aria-expanded="false" aria-controls="collapseTvelve">
+                            Отряды в ЛТП:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTvelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTvelve">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Otrad c in Model.Otrads)
+                    {
+                        @:
+                        <b>ЛТП: </b> @c.LTP.Nom
+
+                        @:
+                        <b>Дата помещения: </b> @c.Date.ToShortDateString();
+
+                @:
+                <b>Номер отряда: </b> @c.NomOtr
+                <br />
+                @:
+                <b>Примечание: </b> @c.Prim
+                <br />
+                @:
+                <b>Должность начальника отряда: </b> @c.Dol
+
+                @:
+                <b>Звание начальника отряда: </b> @c.Zv
+                <br />
+                @:
+                <b>Фамилия начальника отряда: </b> @c.Fam
+                @:
+                <b>Имя начальника отряда: </b> @c.Ima
+                @:
+                <b>Отчество начальника отряда: </b> @c.Otch
+                <br />
+                @:
+                <b>Телефон начальника отряда: </b> @c.Tel
+
+                <hr />
+    }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThirteen">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                           Задолженности:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Debt c in Model.Debts)
+        {
+                    @:
+                    <b>Вид задолженности: </b> @c.Viddebt.Txt
+                    @:
+                    <b>Сумма: </b> @c.Sum
+                    <br />
+
+                    <hr />
+}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </dl>
 </div>
