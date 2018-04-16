@@ -76,6 +76,7 @@ namespace AISLTP.Entities
         public virtual ICollection<Naprav> Napravs { get; set; }
         public virtual ICollection<Objal> Objals { get; set; }
         public virtual ICollection<Otrad> Otrads { get; set; }
+        public virtual ICollection<Debt> Debts { get; set; }
 
         public Lico()
         {
@@ -89,6 +90,7 @@ namespace AISLTP.Entities
             Napravs = new List<Naprav>();
             Objals = new List<Objal>();
             Otrads = new List<Otrad>();
+            Debts = new List<Debt>();
             
         }
     }

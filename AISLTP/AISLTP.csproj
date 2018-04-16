@@ -152,6 +152,7 @@
     <Compile Include="Controllers\Input\InputController.cs" />
     <Compile Include="Controllers\Journals registrations\AddressController.cs" />
     <Compile Include="Controllers\Journals registrations\EducsController.cs" />
+    <Compile Include="Controllers\Journals registrations\JournalLTP\DebtsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\JournalLTPController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\NapravsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\ObjalsController.cs" />
@@ -187,6 +188,7 @@
     <Compile Include="Controllers\Sp\VidsvController.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Court.cs" />
+    <Compile Include="Entities\Debt.cs" />
     <Compile Include="Entities\Doc.cs" />
     <Compile Include="Entities\Educ.cs" />
     <Compile Include="Entities\Koap.cs" />
@@ -462,6 +464,9 @@
     <Content Include="Views\Otrads\Index.cshtml" />
     <Content Include="Views\Otrads\CreateOtrad.cshtml" />
     <Content Include="Views\Otrads\Show.cshtml" />
+    <Content Include="Views\Debts\Index.cshtml" />
+    <Content Include="Views\Debts\CreateDebt.cshtml" />
+    <Content Include="Views\Debts\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
