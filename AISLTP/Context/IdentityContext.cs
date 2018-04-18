@@ -59,5 +59,6 @@ namespace AISLTP.Context
                 .ToTable("ProfLico"));
         }
 
+        public System.Data.Entity.DbSet<AISLTP.Entities.Zavis> Zavis { get; set; }
     }
 }

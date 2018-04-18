@@ -80,6 +80,7 @@ namespace AISLTP.Entities
         public virtual ICollection<Svaz> Svazs { get; set; }
         public virtual ICollection<Work> Works { get; set; }
         public virtual ICollection<WorkLTP> WorkLTPs { get; set; }
+        public virtual ICollection<Zavis> Zaviss { get; set; }
 
         public Lico()
         {
@@ -97,6 +98,7 @@ namespace AISLTP.Entities
             Svazs = new List<Svaz>();
             Works = new List<Work>();
             WorkLTPs = new List<WorkLTP>();
+            Zaviss = new List<Zavis>();
         }
     }
 }

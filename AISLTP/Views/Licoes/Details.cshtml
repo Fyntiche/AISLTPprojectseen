@@ -675,6 +675,37 @@
             </div>
 
 
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFifteen">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                           Зависимости:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFifteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Zavis c in Model.Zaviss)
+        {
+                    @:
+                    <b>Зависимость: </b> @c.Zav
+                    <br />
+                    @:
+                    <b>Принятая мера: </b> @c.Prin
+
+                    <br />
+                    @:
+                    <b>Дата: </b> @c.Date.ToShortDateString()
+                    <br />
+                    <hr />
+}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </dl>
 </div>
