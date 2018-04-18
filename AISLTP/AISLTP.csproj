@@ -158,6 +158,7 @@
     <Compile Include="Controllers\Journals registrations\JournalLTP\ObjalsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\OtradsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\SvazsController.cs" />
+    <Compile Include="Controllers\Journals registrations\JournalLTP\WorkLTPsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\WorksController.cs" />
     <Compile Include="Controllers\Journals registrations\KoapsController.cs" />
     <Compile Include="Controllers\Journals registrations\LicoesController.cs" />
@@ -221,6 +222,7 @@
     <Compile Include="Entities\Viddebt.cs" />
     <Compile Include="Entities\Vidsv.cs" />
     <Compile Include="Entities\Work.cs" />
+    <Compile Include="Entities\WorkLTP.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -469,6 +471,9 @@
     <Content Include="Views\Works\Index.cshtml" />
     <Content Include="Views\Works\CreateWork.cshtml" />
     <Content Include="Views\Works\Show.cshtml" />
+    <Content Include="Views\WorkLTPs\Index.cshtml" />
+    <Content Include="Views\WorkLTPs\CreateWorkLTP.cshtml" />
+    <Content Include="Views\WorkLTPs\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -41,7 +41,7 @@ namespace AISLTP.Context
         public DbSet<Debt> Debts { get; set; }
         public DbSet<Svaz> Svazs { get; set; }
         public DbSet<Work> Works { get; set; }
-
+        public DbSet<WorkLTP> WorkLTPs { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

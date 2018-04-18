@@ -631,7 +631,7 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Work c in Model.Works)
-    {
+                    {
                         @:
                         <b>Место работы до направления в ЛТП: </b> @c.Job
                         <br />
@@ -640,7 +640,35 @@
 
                         <br />
                         <hr />
-}
+            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFourteen">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                            Трудовая деятельность в ЛТП:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (WorkLTP c in Model.WorkLTPs)
+                    {
+                        @:
+                        <b>Отношение к труду: </b> @c.Otn
+                        <br />
+                        @:
+                        <b>Трудоустройство в ЛТП: </b> @c.Trud
+
+                        <br />
+                        <hr />
+            }
                         </ul>
                     </div>
                 </div>

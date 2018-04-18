@@ -13,17 +13,17 @@
         <hr />
         <b><h2>@ViewBag.Fam @ViewBag.Ima @ViewBag.Otc:</h2></b>
         <hr />
-        <h3>Трудовая деятельность до направления в ЛТП:</h3>
+        <h3>Трудовая деятельность в ЛТП:</h3>
 
         <div class="">
             <ul>
-                @foreach (Work c in Model.Works)
+                @foreach (WorkLTP c in Model.WorkLTPs)
                 {
                     @:
-                <b>Место работы до направления в ЛТП: </b> @c.Job
+                <b>Отношение к труду в ЛТП: </b> @c.Otn
                     <br />
                     @:
-                <b>Занимаемая должность: </b> @c.Job
+                <b>Трудоустройство в ЛТП: </b> @c.Trud
 
                     <br />
                     <hr />
@@ -35,8 +35,8 @@
 }
 
 <div>
-    @Html.ActionLink("Добавить информацию", "CreateWork", "Works")<br />
-    @Html.ActionLink("Назад", "Index", "Works")
+    @Html.ActionLink("Добавить информацию", "CreateWorkLTP", "WorkLTPs")<br />
+    @Html.ActionLink("Назад", "Index", "WorkLTPs")
 </div>
 
 @section Scripts {
