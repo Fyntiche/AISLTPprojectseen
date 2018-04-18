@@ -767,6 +767,34 @@
 
 
 
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingEighteen">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                            Отношение к лицам:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseEighteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEighteen">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Soderotnosh c in Model.Soderotnoshes)
+    {
+                        @:
+                        <b>ФИО: </b> @c.Name
+                        <br />
+                        @:
+                        <b>Отношение: </b> @c.Otnosh.Txt
+                        <br />
+                        <hr />
+}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </dl>
 </div>

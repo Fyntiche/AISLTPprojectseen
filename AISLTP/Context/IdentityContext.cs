@@ -45,6 +45,7 @@ namespace AISLTP.Context
         public DbSet<Lechen> Lechens { get; set; }
         public DbSet<Zavis> Zaviss { get; set; }
         public DbSet<Obchest> Obchests { get; set; }
+        public DbSet<Soderotnosh> Soderotnoshes { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
