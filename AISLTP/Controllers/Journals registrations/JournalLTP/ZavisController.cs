@@ -85,7 +85,7 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Zavis zavis = await db.Zavis.FindAsync(id);
+            Zavis zavis = await db.Zaviss.FindAsync(id);
             if (zavis == null)
             {
                 return HttpNotFound();
@@ -108,7 +108,7 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
         {
             if (ModelState.IsValid)
             {
-                db.Zavis.Add(zavis);
+                db.Zaviss.Add(zavis);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
@@ -123,7 +123,7 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Zavis zavis = await db.Zavis.FindAsync(id);
+            Zavis zavis = await db.Zaviss.FindAsync(id);
             if (zavis == null)
             {
                 return HttpNotFound();
@@ -154,7 +154,7 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Zavis zavis = await db.Zavis.FindAsync(id);
+            Zavis zavis = await db.Zaviss.FindAsync(id);
             if (zavis == null)
             {
                 return HttpNotFound();
@@ -167,8 +167,8 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Zavis zavis = await db.Zavis.FindAsync(id);
-            db.Zavis.Remove(zavis);
+            Zavis zavis = await db.Zaviss.FindAsync(id);
+            db.Zaviss.Remove(zavis);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

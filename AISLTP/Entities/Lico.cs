@@ -81,6 +81,7 @@ namespace AISLTP.Entities
         public virtual ICollection<Work> Works { get; set; }
         public virtual ICollection<WorkLTP> WorkLTPs { get; set; }
         public virtual ICollection<Zavis> Zaviss { get; set; }
+        public virtual ICollection<Lechen> Lechens { get; set; }
 
         public Lico()
         {
