@@ -12,16 +12,17 @@ using AISLTP.Entities;
 
 namespace AISLTP.Controllers.Journals_registrations.JournalLTP
 {
-    public class ZavisController : Controller
+    public class ObchestsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Zavis
+        // GET: Obchests
         public async Task<ActionResult> Index()
         {
             var licos = db.Licos.Include(l => l.Nac).Include(l => l.Np).Include(l => l.Obl).Include(l => l.Pol).Include(l => l.Rn);
             return View(await licos.ToListAsync());
         }
+
 
         public async Task<ActionResult> Show(int? id)
         {
@@ -44,7 +45,7 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Show([Bind(Include = "ID,Zav,Prin,Date")] Lico lico)
+        public async Task<ActionResult> Show([Bind(Include = "ID,Uch")] Lico lico)
         {
             if (ModelState.IsValid)
             {
@@ -56,27 +57,28 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
             return View(lico);
         }
 
-        public ActionResult CreateZavis()
+        public ActionResult CreateObchest()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> CreateZavis([Bind(Include = "ID,Zav,Prin,Date")] Zavis CreateZavis)
+        public async Task<ActionResult> CreateObchest([Bind(Include = "ID,Uch")] Obchest CreateObchest)
         {
             if (ModelState.IsValid)
             {
-                db.Licos.Find(Session["IDLico"]).Zaviss.Add(CreateZavis);
+                db.Licos.Find(Session["IDLico"]).Obchests.Add(CreateObchest);
 
                 //db.Addresses.Add(CreateAddress);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(CreateZavis);
+            return View(CreateObchest);
         }
 
+        
 
         protected override void Dispose(bool disposing)
         {

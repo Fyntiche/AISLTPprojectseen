@@ -719,24 +719,53 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Lechen c in Model.Lechens)
-        {
-                    @:
-                    <b>Состоит у врача нарколога: </b> @c.Sost
-                    <br />
-                    @:
-                    <b>Принятая мера: </b> @c.Prin
-                    <br />
-                    @:
-                    <b>Дата: </b> @c.Date.ToShortDateString()
-                    <br />
-                    <hr />
-}
+                    {
+                        @:
+                        <b>Состоит у врача нарколога: </b> @c.Sost
+                        <br />
+                        @:
+                        <b>Принятая мера: </b> @c.Prin
+                        <br />
+                        @:
+                        <b>Дата: </b> @c.Date.ToShortDateString()
+                        <br />
+                        <hr />
+            }
                         </ul>
 
                         </ul>
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingSeventeen">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                            Участие в общественной жизни ЛТП:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseSeventeen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeventeen">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Obchest c in Model.Obchests)
+                    {
+                        @:
+                        <b>Участие: </b> @c.Uch
+                        <br />
+                        <hr />
+            }
+                        </ul>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
 
         </div>
     </dl>
