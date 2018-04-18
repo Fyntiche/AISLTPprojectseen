@@ -39,6 +39,8 @@ namespace AISLTP.Context
         public DbSet<Objal> Objals { get; set; }
         public DbSet<Otrad> Otrads { get; set; }
         public DbSet<Debt> Debts { get; set; }
+        public DbSet<Svaz> Svazs { get; set; }
+        public DbSet<Work> Works { get; set; }
 
 
 
@@ -55,8 +57,6 @@ namespace AISLTP.Context
                 .Map(t => t.MapLeftKey("ProfId")
                 .MapRightKey("LicoId")
                 .ToTable("ProfLico"));
-
-        
         }
 
     }

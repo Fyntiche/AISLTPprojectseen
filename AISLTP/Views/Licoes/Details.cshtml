@@ -504,6 +504,45 @@
                 </div>
             </div>
 
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwelve">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                            Социально полезные связи:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Svaz c in Model.Svazs)
+                    {
+                        @:
+                        <b>Фамилия: </b> @c.Fam
+                        <br />
+                        @:
+                        <b>Имя: </b> @c.Ima
+                        <br />
+                        @:
+                        <b>Отчество: </b> @c.Otc
+                        <br />
+                        @:
+                        <b>Дата рождения: </b> @c.Dr.ToShortDateString()
+                        <br />
+                        @:
+                        <b>Вид связи: </b> @c.Vidsv.Txt
+                        <br />
+                        @:
+                        <b>Примечание: </b> @c.Prim
+                        <br />
+
+                        <hr />
+            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingTvelve">
@@ -558,7 +597,7 @@
                 <div class="panel-heading" role="tab" id="headingThirteen">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-                           Задолженности:
+                            Задолженности:
                         </a>
                     </h4>
                 </div>
@@ -566,20 +605,46 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Debt c in Model.Debts)
-        {
-                    @:
-                    <b>Вид задолженности: </b> @c.Viddebt.Txt
-                    @:
-                    <b>Сумма: </b> @c.Sum
-                    <br />
+                    {
+                        @:
+                        <b>Вид задолженности: </b> @c.Viddebt.Txt
+                        @:
+                        <b>Сумма: </b> @c.Sum
+                        <br />
 
-                    <hr />
-}
+                        <hr />
+            }
                         </ul>
                     </div>
                 </div>
             </div>
 
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFriteen">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFriteen" aria-expanded="false" aria-controls="collapseFriteen">
+                            Трудовая деятельность до направления в ЛТП:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFriteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFriteen">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Work c in Model.Works)
+    {
+                        @:
+                        <b>Место работы до направления в ЛТП: </b> @c.Job
+                        <br />
+                        @:
+                        <b>Занимаемая должность: </b> @c.Job
+
+                        <br />
+                        <hr />
+}
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
