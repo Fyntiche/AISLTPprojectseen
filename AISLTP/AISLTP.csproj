@@ -159,6 +159,7 @@
     <Compile Include="Controllers\Journals registrations\JournalLTP\ObchestsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\ObjalsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\OtradsController.cs" />
+    <Compile Include="Controllers\Journals registrations\JournalLTP\PsixesController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\SoderotnoshesController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\SvazsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\WorkLTPsController.cs" />
@@ -215,6 +216,7 @@
     <Compile Include="Entities\Otrad.cs" />
     <Compile Include="Entities\Privent.cs" />
     <Compile Include="Entities\Prof.cs" />
+    <Compile Include="Entities\Psix.cs" />
     <Compile Include="Entities\Rn.cs" />
     <Compile Include="Entities\Lico.cs" />
     <Compile Include="Entities\Nac.cs" />
@@ -494,6 +496,9 @@
     <Content Include="Views\Soderotnoshes\Index.cshtml" />
     <Content Include="Views\Soderotnoshes\CreateSoderotnoshes.cshtml" />
     <Content Include="Views\Soderotnoshes\Show.cshtml" />
+    <Content Include="Views\Psixes\Index.cshtml" />
+    <Content Include="Views\Psixes\CreatePsix.cshtml" />
+    <Content Include="Views\Psixes\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
