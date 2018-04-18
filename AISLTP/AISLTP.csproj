@@ -197,6 +197,7 @@
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Court.cs" />
     <Compile Include="Entities\Debt.cs" />
+    <Compile Include="Entities\Discip.cs" />
     <Compile Include="Entities\Doc.cs" />
     <Compile Include="Entities\Educ.cs" />
     <Compile Include="Entities\Koap.cs" />

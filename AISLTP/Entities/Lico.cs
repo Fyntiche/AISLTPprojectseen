@@ -85,6 +85,7 @@ namespace AISLTP.Entities
         public virtual ICollection<Obchest> Obchests { get; set; }
         public virtual ICollection<Soderotnosh> Soderotnoshes { get; set; }
         public virtual ICollection<Psix> Psixes { get; set; }
+        public virtual ICollection<Discip> Discips { get; set; }
 
         public Lico()
         {
@@ -106,6 +107,7 @@ namespace AISLTP.Entities
             Obchests = new List<Obchest>();
             Soderotnoshes = new List<Soderotnosh>();
             Psixes = new List<Psix>();
+            Discips = new List<Discip>();
         }
     }
 }
