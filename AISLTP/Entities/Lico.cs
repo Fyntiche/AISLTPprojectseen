@@ -88,6 +88,7 @@ namespace AISLTP.Entities
         public virtual ICollection<Discip> Discips { get; set; }
         public virtual ICollection<Samohod> Samohods { get; set; }
         public virtual ICollection<Doc> Docs { get; set; }
+        public virtual ICollection<Osv> Osvs { get; set; }
 
         public Lico()
         {
@@ -112,6 +113,7 @@ namespace AISLTP.Entities
             Discips = new List<Discip>();
             Samohods = new List<Samohod>();
             Docs = new List<Doc>();
+            Osvs = new List<Osv>();
         }
     }
 }

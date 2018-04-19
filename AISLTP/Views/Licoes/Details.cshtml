@@ -907,15 +907,54 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Doc c in Model.Docs)
-    {
+                    {
                         <li>@c.Txt</li>
-}
+            }
                         </ul>
                     </div>
                 </div>
             </div>
 
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwentyFri">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwentyFri" aria-expanded="false" aria-controls="collapseTwentyFri">
+                            Информация о лице после освобождения из ЛТП:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwentyFri" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyFri">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Osv c in Model.Osvs)
+    {
+                        @:
+                        <b>Дата освобождения: </b> @c.DateOsv.ToShortDateString()
+                        @:
+                        <b>Дата прибытия: </b> @c.DatePrib.ToShortDateString()
+                        <br />
+                        @:
+                        <b>Cотрудник контролировавший прибытие: </b> @c.Control
+                        <br />
+                        @:
+                        <b>Имеется ли место жительства: </b> @c.Locat
+                        <br />
+                        @:
+                        <b>Необходимость доставки к дому: </b> @c.Dost
+                        <br />
+                        @:
+                        <b>Информация о трудоустройстве после освобождения: </b> @c.Trud
+                        <br />
+                        @:
+                        <b>Личная позиция лица о трудоустройсте после освобождения: </b> @c.Posic
+                        <br />
 
+                        <hr />
+}
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
 
 
