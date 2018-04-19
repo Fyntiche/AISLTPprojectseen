@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Entities
@@ -15,6 +13,7 @@ namespace AISLTP.Entities
 
         [Display(Name = "ЛТП")]
         public int? LTPID { get; set; }
+
         public virtual LTP LTP { get; set; }
 
         [Display(Name = "Дата помещения")]

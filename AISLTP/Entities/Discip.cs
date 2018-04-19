@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace AISLTP.Entities
 {
@@ -23,7 +21,6 @@ namespace AISLTP.Entities
         [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display(Name = "Наказание")]
         public string Nak { get; set; }
-
 
         public ICollection<Lico> Licos { get; set; }
 

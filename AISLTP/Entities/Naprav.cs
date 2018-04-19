@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Entities
@@ -15,6 +12,7 @@ namespace AISLTP.Entities
 
         [Display(Name = "Основания направления")]
         public int? OsnnapID { get; set; }
+
         public virtual Osnnap Osnnap { get; set; }
 
         [Required(ErrorMessage = "Поле должно быть установлено")]
@@ -61,6 +59,5 @@ namespace AISLTP.Entities
         [StringLength(255, ErrorMessage = "Длина строки должна до 255 символов")]
         [Display(Name = "Телефон сотрудника, оформившего лицо")]
         public string TelO { get; set; }
-
     }
 }

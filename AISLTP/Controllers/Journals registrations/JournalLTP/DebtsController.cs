@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AISLTP.Context;
+﻿using AISLTP.Context;
 using AISLTP.Entities;
+using System.Data.Entity;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Journals_registrations.JournalLTP
 {
@@ -77,13 +72,6 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
             ViewBag.ViddebtID = new SelectList(db.Viddebts, "ID", "Txt", CreateDebt.ViddebtID);
             return View(CreateDebt);
         }
-
-
-
-
-
-
-       
 
         protected override void Dispose(bool disposing)
         {

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AISLTP.Entities
@@ -36,11 +34,11 @@ namespace AISLTP.Entities
         [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display(Name = "Вид связи")]
         public int? VidsvID { get; set; }
+
         public virtual Vidsv Vidsv { get; set; }
 
         [Display(Name = "Примечание")]
         public string Prim { get; set; }
-
 
         public virtual ICollection<Lico> Licos { get; set; }
 

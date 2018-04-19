@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace AISLTP.Entities
 {
@@ -20,6 +17,7 @@ namespace AISLTP.Entities
         public string Trud { get; set; }
 
         public ICollection<Lico> Licos { get; set; }
+
         public WorkLTP()
         {
             Licos = new List<Lico>();

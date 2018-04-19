@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace AISLTP.Entities
 {
     public class Osv
     {
-
         [Key]
         public int ID { get; set; }
 
@@ -46,12 +43,8 @@ namespace AISLTP.Entities
         [Display(Name = "Необходимость бронирования рабочего места после освобождения")]
         public bool? Bron { get; set; }
 
-
-
-
-  
-
         public ICollection<Lico> Licos { get; set; }
+
         public Osv()
         {
             Licos = new List<Lico>();

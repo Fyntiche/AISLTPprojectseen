@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AISLTP.Context;
+﻿using AISLTP.Context;
 using AISLTP.Entities;
+using System.Data.Entity;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Journals_registrations.JournalLTP
 {
     public class NapravsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
 
         public async Task<ActionResult> Index()
         {
@@ -79,7 +73,6 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
             ViewBag.OsnnapID = new SelectList(db.Osnnaps, "ID", "Txt", CreateNaprav.OsnnapID);
             return View(CreateNaprav);
         }
-
 
         protected override void Dispose(bool disposing)
         {

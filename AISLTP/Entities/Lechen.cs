@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace AISLTP.Entities
 {
     public class Lechen
     {
-
         [Key]
         public int ID { get; set; }
 
@@ -26,6 +23,7 @@ namespace AISLTP.Entities
         public DateTime Date { get; set; }
 
         public ICollection<Lico> Licos { get; set; }
+
         public Lechen()
         {
             Licos = new List<Lico>();

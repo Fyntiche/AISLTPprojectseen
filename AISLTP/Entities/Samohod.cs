@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace AISLTP.Entities
 {
@@ -27,6 +25,7 @@ namespace AISLTP.Entities
 
         [Display(Name = "Информация о побеге")]
         public int? SamovolID { get; set; }
+
         public virtual Samovol Samovol { get; set; }
 
         [Required(ErrorMessage = "Поле должно быть установлено")]
@@ -34,6 +33,7 @@ namespace AISLTP.Entities
         public string Prim { get; set; }
 
         public ICollection<Lico> Licos { get; set; }
+
         public Samohod()
         {
             Licos = new List<Lico>();

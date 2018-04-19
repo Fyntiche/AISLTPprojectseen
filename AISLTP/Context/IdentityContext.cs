@@ -51,7 +51,6 @@ namespace AISLTP.Context
         public DbSet<Samohod> Samohods { get; set; }
         public DbSet<Osv> Osvs { get; set; }
 
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Address>().HasMany(c => c.Licos)
@@ -66,7 +65,5 @@ namespace AISLTP.Context
                 .MapRightKey("LicoId")
                 .ToTable("ProfLico"));
         }
-
-
     }
 }

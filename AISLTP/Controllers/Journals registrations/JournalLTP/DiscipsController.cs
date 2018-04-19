@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AISLTP.Context;
+﻿using AISLTP.Context;
 using AISLTP.Entities;
+using System.Data.Entity;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace AISLTP.Controllers.Journals_registrations.JournalLTP
 {
@@ -22,8 +17,6 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
             var licos = db.Licos.Include(l => l.Nac).Include(l => l.Np).Include(l => l.Obl).Include(l => l.Pol).Include(l => l.Rn);
             return View(await licos.ToListAsync());
         }
-
-
 
         public async Task<ActionResult> Show(int? id)
         {
@@ -42,7 +35,6 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
             Session["IDLico"] = lico.ID;
             return View(lico);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -78,11 +70,6 @@ namespace AISLTP.Controllers.Journals_registrations.JournalLTP
 
             return View(CreateDiscips);
         }
-
-
-
-
-        
 
         protected override void Dispose(bool disposing)
         {

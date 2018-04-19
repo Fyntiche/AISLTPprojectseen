@@ -16,7 +16,6 @@ namespace AISLTP.Entities
 
         public Osnnap()
         {
-
             Napravs = new List<Naprav>();
         }
     }
