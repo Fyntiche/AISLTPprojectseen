@@ -868,24 +868,47 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Samohod c in Model.Samohods)
-        {
-                    @:
-                    <b>Дата побега: </b> @c.DateP.ToShortDateString()
-                    @:
-                    <b>Дата задержания: </b> @c.DateZ.ToShortDateString()
-                    <br />
-                    @:
-                    <b>Ф.И.О. задержавшего сотрудника: </b> @c.FIO
-                    <br />
-                    @:
-                    <b>Информация о побеге: </b> @c.Samovol.Txt
-                    <br />
-                    @:
-                    <b>Примечание: </b> @c.Prim
-                    <br />
+                    {
+                        @:
+                        <b>Дата побега: </b> @c.DateP.ToShortDateString()
+                        @:
+                        <b>Дата задержания: </b> @c.DateZ.ToShortDateString()
+                        <br />
+                        @:
+                        <b>Ф.И.О. задержавшего сотрудника: </b> @c.FIO
+                        <br />
+                        @:
+                        <b>Информация о побеге: </b> @c.Samovol.Txt
+                        <br />
+                        @:
+                        <b>Примечание: </b> @c.Prim
+                        <br />
 
 
-                    <hr />
+                        <hr />
+            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwentyTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
+                            Документы переданные при доставлении:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwentyTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyTwo">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Doc c in Model.Docs)
+    {
+                        <li>@c.Txt</li>
 }
                         </ul>
                     </div>

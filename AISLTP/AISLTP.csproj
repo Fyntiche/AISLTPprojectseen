@@ -154,6 +154,7 @@
     <Compile Include="Controllers\Journals registrations\EducsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\DebtsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\DiscipsController.cs" />
+    <Compile Include="Controllers\Journals registrations\JournalLTP\DocsController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\JournalLTPController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\LechensController.cs" />
     <Compile Include="Controllers\Journals registrations\JournalLTP\NapravsController.cs" />
@@ -217,6 +218,7 @@
     <Compile Include="Entities\Osnsocr.cs" />
     <Compile Include="Entities\Otnosh.cs" />
     <Compile Include="Entities\Otrad.cs" />
+    <Compile Include="Entities\PeredDoc.cs" />
     <Compile Include="Entities\Privent.cs" />
     <Compile Include="Entities\Prof.cs" />
     <Compile Include="Entities\Psix.cs" />
@@ -509,6 +511,9 @@
     <Content Include="Views\Samohods\Index.cshtml" />
     <Content Include="Views\Samohods\CreateSamohod.cshtml" />
     <Content Include="Views\Samohods\Show.cshtml" />
+    <Content Include="Views\Docs\Details.cshtml" />
+    <Content Include="Views\Docs\Edit.cshtml" />
+    <Content Include="Views\Docs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
