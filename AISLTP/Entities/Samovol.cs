@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AISLTP.Entities
 {
@@ -10,5 +11,12 @@ namespace AISLTP.Entities
         [Required(ErrorMessage = "Поле должно быть установлено")]
         [Display(Name = "Самовольное оставление ЛТП")]
         public string Txt { get; set; }
+
+        public ICollection<Samohod> Samohods { get; set; }
+
+        public Samovol()
+        {
+            Samohods = new List<Samohod>();
+        }
     }
 }

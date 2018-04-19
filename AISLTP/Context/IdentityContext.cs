@@ -48,6 +48,7 @@ namespace AISLTP.Context
         public DbSet<Soderotnosh> Soderotnoshes { get; set; }
         public DbSet<Psix> Psixes { get; set; }
         public DbSet<Discip> Discips { get; set; }
+        public DbSet<Samohod> Samohods { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -807,7 +807,7 @@
                     <div class="panel-body">
                         <ul>
                             @foreach (Psix c in Model.Psixes)
-    {
+                    {
                         @:
                         <b>Информация психолога: </b> @c.Psi
                         <br />
@@ -818,11 +818,81 @@
                         <b>Дата: </b> @c.Date.ToShortDateString()
                         <br />
                         <hr />
+            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwenty">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                            Дисциплинарные проступки:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwenty" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwenty">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Discip c in Model.Discips)
+                    {
+                        @:
+                        <b>Дисциплинарный проступок: </b> @c.Dis
+                        <br />
+                        @:
+                        <b>Дата совершения: </b> @c.Date.ToShortDateString()
+                        <br />
+                        @:
+                        <b>Наказание: </b> @c.Nak
+                        <br />
+                        <hr />
+            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwentyOne">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
+                            Самовольное оставление ЛТП:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwentyOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyOne">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (Samohod c in Model.Samohods)
+        {
+                    @:
+                    <b>Дата побега: </b> @c.DateP.ToShortDateString()
+                    @:
+                    <b>Дата задержания: </b> @c.DateZ.ToShortDateString()
+                    <br />
+                    @:
+                    <b>Ф.И.О. задержавшего сотрудника: </b> @c.FIO
+                    <br />
+                    @:
+                    <b>Информация о побеге: </b> @c.Samovol.Txt
+                    <br />
+                    @:
+                    <b>Примечание: </b> @c.Prim
+                    <br />
+
+
+                    <hr />
 }
                         </ul>
                     </div>
                 </div>
             </div>
+
+
 
 
 
