@@ -253,6 +253,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DefaultConnection.mdf" />
+    <Content Include="App_Data\DefaultConnection_log.ldf">
+      <DependentUpon>DefaultConnection.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml" />
@@ -328,6 +332,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\AISLTP - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\AISLTP2018041905582 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\grid.locale-ar.js" />
     <Content Include="Scripts\i18n\grid.locale-bg.js" />
@@ -521,7 +527,6 @@
     <Content Include="Views\Osvs\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\Search\" />
   </ItemGroup>
   <ItemGroup>
